@@ -1,0 +1,76 @@
+---
+interface Props {
+  title: string;
+  className?: string;
+  urlActive?: string;
+}
+
+import "../styles/global.css";
+
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+let { title, className = "", urlActive = "/" } = Astro.props;
+
+title = `Frontend Mentor | Space tourism website - ${title}`;
+className += " pt-[80px] lg:pt-[110px] grid grid-rows-[auto 1fr auto]";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <meta name="author" content="Barrie Freyre" />
+
+    <meta name="linkedin" content="https://www.linkedin.com/in/barriefreyre/" />
+    <meta name="github" content="https://github.com/barriedirk" />
+    <meta
+      name="frontendmentor"
+      content="https://www.frontendmentor.io/profile/barriedirk"
+    />
+
+    <link rel="me" href="https://www.linkedin.com/in/barriefreyre/" />
+    <link rel="me" href="https://github.com/barriedirk" />
+    <link rel="me" href="https://www.frontendmentor.io/profile/barriedirk" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Barrie Freyre",
+        "url": "",
+        "sameAs": [
+          "https://www.linkedin.com/in/barriefreyre/",
+          "https://github.com/barriedirk",
+          "https://www.frontendmentor.io/profile/barriedirk"
+        ]
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title}</title>
+  </head>
+  <body class={className}>
+    <Header urlActive={urlActive} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

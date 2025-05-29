@@ -1,0 +1,68 @@
+.text-preset-1 {
+  font-family: var(--ff-bellefair);
+  font-weight: var(--fw-normal);
+  font-size: 9rem; /* 144px */
+  line-height: 15.471rem; /* 171.9% of 144px */
+  letter-spacing: 0rem;
+}
+
+.text-preset-2 {
+  font-family: var(--ff-bellefair);
+  font-weight: var(--fw-normal);
+  font-size: 6.25rem; /* 100px */
+  line-height: 7.1625rem; /* 114.6% of 100px */
+  letter-spacing: 0rem;
+}
+
+.text-preset-3 {
+  font-family: var(--ff-bellefair);
+  font-weight: var(--fw-normal);
+  font-size: 3.5rem; /* 56px */
+  line-height: 2.247rem; /* 64.2% of 56px */
+  /* line-height: 0.642; */
+  letter-spacing: 0rem;
+}
+
+.text-preset-4 {
+  font-family: var(--ff-bellefair);
+  font-weight: var(--fw-normal);
+  font-size: 2rem; /* 32px */
+  line-height: 0.734rem; /* 36.7% of 32px */
+  /* line-height: 0.367; */
+  letter-spacing: 0rem;
+}
+
+.text-preset-5 {
+  font-family: var(--ff-barlow);
+  font-weight: var(--fw-normal);
+  font-size: 1.75rem; /* 28px */
+  line-height: 0.588rem; /* 33.6% of 28px */
+  /* line-height: 0.336; */
+  letter-spacing: 0.25rem; /* 4px */
+}
+
+.text-preset-6 {
+  font-family: var(--ff-bellefair);
+  font-weight: var(--fw-normal);
+  font-size: 1.75rem; /* 28px */
+  line-height: 0.56175rem; /* 32.1% of 28px */
+  /* line-height: 0.321; */
+  letter-spacing: 0rem;
+}
+
+.text-preset-7 {
+  font-family: var(--ff-barlow);
+  font-weight: var(--fw-normal);
+  font-size: 0.875rem; /* 14px */
+  line-height: 0.147rem; /* 16.8% of 14px */
+  /* line-height: 0.168; */
+  letter-spacing: 0.125rem; /* 2px */
+}
+
+.text-preset-8 {
+  font-family: var(--ff-barlow);
+  font-size: 1rem; /* 16px */
+  line-height: 0.192rem; /* 19.2% of 16px */
+  /* line-height: 0.192; */
+  letter-spacing: 0.125rem; /* 2px */
+}

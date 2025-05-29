@@ -1,0 +1,87 @@
+---
+import "./Header.css";
+
+import Container from "./Container.astro";
+
+interface Props {
+  urlActive?: string;
+}
+
+const { urlActive = "" } = Astro.props;
+---
+
+<header
+  id="header"
+  class="header h-fit fixed top-0 left-0 w-full lg:pt-[30px]"
+  role="banner"
+>
+  <Container className="h-[80px] flex flex-row items-center justify-between">
+    <a
+      class="header__logo w-[40px] h-[40px] inline-block flex-none basis-[40px]"
+      href="#"
+    >
+      <svg class="logo w-[40px] h-[40px]" aria-label="Bookmark logo">
+        <use href="./assets/shared/logo.svg#icon-planet"></use>
+      </svg>
+    </a>
+    <div class="header__separator"></div>
+    <nav class="header__nav" aria-label="Main navigation">
+      <button
+        id="headerBtnToggle"
+        class="header__toggle bg-transparent border-0"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="header-menu"
+      >
+        <span class="sr-only">Open/Close button</span>
+      </button>
+      <ul id="header-menu" class="header__nav-list text-preset-8" role="menu">
+        <li class="header__nav-item" role="none">
+          <a href="/" class="header__nav-link" role="menuitem"
+            ><strong>00</strong> Home</a
+          >
+        </li>
+        <li class="header__nav-item" role="none">
+          <a href="/destination" class="header__nav-link" role="menuitem"
+            ><strong>01</strong> Destination</a
+          >
+        </li>
+        <li class="header__nav-item" role="none">
+          <a href="/crew" class="header__nav-link" role="menuitem"
+            ><strong>02</strong> Crew</a
+          >
+        </li>
+        <li class="header__nav-item" role="none">
+          <a href="/technology" class="header__nav-link" role="menuitem"
+            ><strong>03</strong> Technology</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </Container>
+</header>
+
+<script>
+  const $body = document.querySelector("body");
+  const $btnToggle = document.querySelector("#headerBtnToggle");
+  const $$menuLinks = document.querySelectorAll(".header__nav-link");
+
+  $$menuLinks.forEach(($link: Element) => {
+    $link.addEventListener("click", () => {
+      $body!.classList.remove("is-expanded");
+      $btnToggle!.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  $btnToggle!.addEventListener("click", async (evt) => {
+    evt.preventDefault();
+
+    const isExpanded = $btnToggle!.getAttribute("aria-expanded") == "true";
+
+    $btnToggle!.setAttribute("aria-expanded", !isExpanded ? "true" : "false");
+
+    isExpanded
+      ? $body!.classList.remove("is-expanded")
+      : $body!.classList.add("is-expanded");
+  });
+</script>

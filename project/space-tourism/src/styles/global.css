@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@import "./abstracts/variables.css";
+
+@import "./base/reset.css";
+@import "./base/base.css";
+@import "./base/typography.css";
+
+/* @import "./base/debug.css"; */
