@@ -5,7 +5,84 @@ import Container from "../components/Container.astro";
 ---
 
 <BaseLayout title="Main Page" urlActive="/">
-  <Container>
-    <h1>Hello world!</h1>
+  <Container className="pt-[30px]">
+    <div class="hero flex flex-col gap-12 items-center">
+      <div class="hero__header flex flex-col items-center gap-6">
+        <h1 class="hero__subtitle text-preset-5">So, you want to travel to</h1>
+        <h2 class="hero__title text-preset-1">Space</h2>
+        <p class="hero__description text-preset-9 text-center">
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </p>
+      </div>
+      <div
+        class="hero__explore--wrapper flex flex-col items-center justify-center"
+      >
+        <span class="hero__explore text-preset-4"> Explore </span>
+      </div>
+    </div>
   </Container>
 </BaseLayout>
+
+<style>
+  .hero__explore--wrapper {
+    min-height: 382px;
+    width: 100%;
+  }
+
+  .hero__explore {
+    width: 144px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-blue-900);
+    border-radius: 50%;
+    background-color: var(--clr-white);
+    text-transform: uppercase;
+  }
+
+  .hero__explore:hover,
+  .hero__explore:active,
+  .hero__explore:focus-visible {
+    box-shadow: 0 0 0 72px var(--clr-infinity);
+  }
+
+  .hero__subtitle,
+  .hero__title {
+    text-transform: uppercase;
+  }
+
+  .hero__subtitle,
+  .hero__description {
+    color: var(--clr-blue-300);
+  }
+
+  body {
+    background-image: url("./assets/home/background-home-mobile.jpg");
+  }
+
+  @media screen and (min-width: 48em) {
+    body {
+      background-image: url("./assets/home/background-home-tablet.jpg");
+    }
+  }
+
+  @media screen and (min-width: 90em) {
+    body {
+      background-image: url("./assets/home/background-home-desktop.jpg");
+    }
+
+    .hero__explore {
+      width: 272px;
+    }
+
+    .hero__explore:hover,
+    .hero__explore:active,
+    .hero__explore:focus-visible {
+      box-shadow: 0 0 0 84px var(--clr-infinity);
+    }
+  }
+</style>
