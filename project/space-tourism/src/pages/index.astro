@@ -5,9 +5,9 @@ import Container from "../components/Container.astro";
 ---
 
 <BaseLayout title="Main Page" urlActive="/">
-  <Container className="pt-[30px]">
-    <div class="hero flex flex-col gap-12 items-center">
-      <div class="hero__header flex flex-col items-center gap-6">
+  <Container className="pt-[100px]">
+    <div class="hero flex gap-12 items-center mx-auto">
+      <div class="hero__header flex flex-col items-center gap-6 md:gap-5">
         <h1 class="hero__subtitle text-preset-5">So, you want to travel to</h1>
         <h2 class="hero__title text-preset-1">Space</h2>
         <p class="hero__description text-preset-9 text-center">
@@ -17,9 +17,7 @@ import Container from "../components/Container.astro";
           experience!
         </p>
       </div>
-      <div
-        class="hero__explore--wrapper flex flex-col items-center justify-center"
-      >
+      <div class="hero__explore--wrapper flex flex-col justify-center">
         <span class="hero__explore text-preset-4"> Explore </span>
       </div>
     </div>
@@ -27,7 +25,12 @@ import Container from "../components/Container.astro";
 </BaseLayout>
 
 <style>
+  .hero {
+    flex-direction: column;
+  }
+
   .hero__explore--wrapper {
+    align-items: center;
     min-height: 382px;
     width: 100%;
   }
@@ -68,6 +71,14 @@ import Container from "../components/Container.astro";
     body {
       background-image: url("./assets/home/background-home-tablet.jpg");
     }
+
+    .hero {
+      margin-top: 110px;
+    }
+
+    .hero__explore {
+      width: 272px;
+    }
   }
 
   @media screen and (min-width: 90em) {
@@ -75,14 +86,30 @@ import Container from "../components/Container.astro";
       background-image: url("./assets/home/background-home-desktop.jpg");
     }
 
+    .hero {
+      flex-direction: row;
+      max-width: 1100px;
+      margin-top: 210px;
+    }
+
+    .hero__header {
+      align-items: flex-start;
+      flex: 0 0 544px;
+    }
+    .hero__header > * {
+      text-align: left;
+    }
+
     .hero__explore {
       width: 272px;
     }
 
-    .hero__explore:hover,
-    .hero__explore:active,
-    .hero__explore:focus-visible {
+    .hero__explore:is(:hover, :active, :focus-visible) {
       box-shadow: 0 0 0 84px var(--clr-infinity);
+    }
+
+    .hero__explore--wrapper {
+      align-items: flex-end;
     }
   }
 </style>
