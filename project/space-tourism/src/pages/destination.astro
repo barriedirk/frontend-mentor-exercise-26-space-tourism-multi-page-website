@@ -1,7 +1,296 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Container from "../components/Container.astro";
 ---
 
-<BaseLayout title="Destination">
-  <h1>Destination</h1>
+<BaseLayout title="Destination" urlActive="/destination">
+  <Container className="pt-[100px]">
+    <div class="destination">
+      <h1 class="destination__title text-preset-6">
+        <span>01</span> Pick your destination
+      </h1>
+      <div class="destination__celestial-body--wrapper">
+        <picture id="celestialImage" class="destination__celestial-body">
+          <source
+            id="celestialImageWebp"
+            srcset="/assets/destination/image-moon.webp"
+            type="image/webp"
+          />
+          <img
+            id="celestialImageFallback"
+            src="/assets/destination/image-moon.png"
+            alt="Image of Moon"
+          />
+        </picture>
+      </div>
+      <div class="destination__content text-preset-8">
+        <div
+          class="tabs destination__tabs"
+          role="tablist"
+          aria-label="Destinations"
+        >
+          <button
+            type="button"
+            class="tabs__tab tabs__tab--active"
+            id="tab-1"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-1"
+            tabindex="0"
+            data-tab="moon"
+          >
+            <span>Moon</span>
+          </button>
+          <button
+            type="button"
+            class="tabs__tab"
+            id="tab-2"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-2"
+            tabindex="-1"
+            data-tab="mars"
+          >
+            <span>Mars</span>
+          </button>
+          <button
+            type="button"
+            class="tabs__tab"
+            id="tab-3"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-3"
+            tabindex="-1"
+            data-tab="europa"
+          >
+            <span>Europa</span>
+          </button>
+          <button
+            type="button"
+            class="tabs__tab"
+            id="tab-4"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-4"
+            tabindex="-1"
+            data-tab="titan"
+          >
+            <span>Titan</span>
+          </button>
+        </div>
+        <div class="panels">
+          <div
+            id="panel-1"
+            class="panel destination_info"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <h2 class="destination_info__title text-preset-2">Moon</h2>
+            <p class="destination_info__description text-preset-9">
+              See our planet as you’ve never seen it before. A perfect relaxing
+              trip away to help regain perspective and come back refreshed.
+              While you’re there, take in some history by visiting the Luna 2
+              and Apollo 11 landing sites.
+            </p>
+            <div class="destination-meta">
+              <div class="destination-meta__distance">
+                <span class="meta-label text-preset-7">Avg. Distance</span>
+                <span class="meta-value">384,400 km</span>
+              </div>
+              <div class="destination-meta__travel-time">
+                <span class="meta-label text-preset-7">Est. Travel Time</span>
+                <span class="meta-value text-preset-6">3 days</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="panel-2"
+            class="panel destination_info"
+            role="tabpanel"
+            tabindex="-1"
+          >
+            <h2 class="destination_info__title text-preset-2">Mars</h2>
+            <p class="destination_info__description text-preset-9">
+              Don’t forget to pack your hiking boots. You’ll need them to tackle
+              Olympus Mons, the tallest planetary mountain in our solar system.
+              It’s two and a half times the size of Everest!
+            </p>
+            <div class="destination-meta">
+              <div class="destination-meta__distance">
+                <span class="meta-label text-preset-7">Avg. Distance</span>
+                <span class="meta-value">225 mil. km</span>
+              </div>
+              <div class="destination-meta__travel-time">
+                <span class="meta-label text-preset-7">Est. Travel Time</span>
+                <span class="meta-value text-preset-6">9 months</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="panel-3"
+            class="panel destination_info"
+            role="tabpanel"
+            tabindex="-1"
+          >
+            <h2 class="destination_info__title text-preset-2">Europa</h2>
+            <p class="destination_info__description text-preset-9">
+              The smallest of the four Galilean moons orbiting Jupiter, Europa
+              is a winter lover’s dream. With an icy surface, it’s perfect for a
+              bit of ice skating, curling, hockey, or simple relaxation in your
+              snug wintery cabin.
+            </p>
+            <div class="destination-meta">
+              <div class="destination-meta__distance">
+                <span class="meta-label text-preset-7">Avg. Distance</span>
+                <span class="meta-value text-preset-6">628 mil. km</span>
+              </div>
+              <div class="destination-meta__travel-time">
+                <span class="meta-label text-preset-7">Est. Travel Time</span>
+                <span class="meta-value text-preset-6">3 years</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="panel-4"
+            class="panel destination_info"
+            role="tabpanel"
+            tabindex="-1"
+          >
+            <h2 class="destination_info__title text-preset-2">Titan</h2>
+            <p class="destination_info__description text-preset-9">
+              The only moon known to have a dense atmosphere other than Earth,
+              Titan is a home away from home (just a few hundred degrees
+              colder!). As a bonus, you get striking views of the Rings of
+              Saturn.
+            </p>
+            <div class="destination-meta">
+              <div class="destination-meta__distance">
+                <span class="meta-label text-preset-7">Avg. Distance</span>
+                <span class="meta-value text-preset-6">1.6 bil. km</span>
+              </div>
+              <div class="destination-meta__travel-time">
+                <span class="meta-label text-preset-7">Est. Travel Time</span>
+                <span class="meta-value text-preset-6">7 years</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      body {
+        background-image: url("./assets/destination/background-destination-mobile.jpg");
+      }
+
+      @media screen and (min-width: 48em) {
+        body {
+          background-image: url("./assets/destination/background-destination-tablet.jpg");
+        }
+      }
+
+      @media screen and (min-width: 90em) {
+        body {
+          background-image: url("./assets/destination/background-destination-desktop.jpg");
+        }
+      }
+    </style>
+  </Container>
 </BaseLayout>
+
+<script>
+  // Define keys as a union type
+  type CelestialBody = "moon" | "mars" | "europa" | "titan";
+
+  // Define image structure
+  interface ImageData {
+    webp: string;
+    png: string;
+    alt: string;
+  }
+
+  const imageMap: Record<CelestialBody, ImageData> = {
+    moon: {
+      webp: "/assets/destination/image-moon.webp",
+      png: "/assets/destination/image-moon.png",
+      alt: "Image of the Moon",
+    },
+    mars: {
+      webp: "/assets/destination/image-mars.webp",
+      png: "/assets/destination/image-mars.png",
+      alt: "Image of Mars",
+    },
+    europa: {
+      webp: "/assets/destination/image-europa.webp",
+      png: "/assets/destination/image-europa.png",
+      alt: "Image of Europa",
+    },
+    titan: {
+      webp: "/assets/destination/image-titan.webp",
+      png: "/assets/destination/image-titan.png",
+      alt: "Image of Titan",
+    },
+  };
+
+  const webpSource = document.getElementById(
+    "celestialImageWebp"
+  ) as HTMLSourceElement;
+  const fallbackImg = document.getElementById(
+    "celestialImageFallback"
+  ) as HTMLImageElement;
+
+  const tabButtons = document.querySelectorAll<HTMLButtonElement>("[data-tab]");
+  const tabPanels = document.querySelectorAll<HTMLElement>("[role=tabpanel]");
+
+  // tabButtons.forEach((btn) => {
+  //   btn.addEventListener("click", () => {
+  //     const tabKey = btn.getAttribute("data-tab") as CelestialBody;
+
+  //     if (!tabKey || !(tabKey in imageMap)) return;
+
+  //     const { webp, png, alt } = imageMap[tabKey];
+
+  //     webpSource.srcset = webp;
+  //     fallbackImg.src = png;
+  //     fallbackImg.alt = alt;
+  //   });
+  // });
+
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const tabKey = btn.getAttribute("data-tab") as CelestialBody;
+      const targetPanelId = btn.getAttribute("aria-controls");
+
+      // Update ARIA attributes for all tabs
+      tabButtons.forEach((tab) => {
+        tab.setAttribute("aria-selected", "false");
+        tab.setAttribute("tabindex", "-1");
+        tab.classList.remove("tabs__tab--active");
+      });
+
+      // Set selected tab
+      btn.setAttribute("aria-selected", "true");
+      btn.setAttribute("tabindex", "0");
+      btn.classList.add("tabs__tab--active");
+      btn.focus();
+
+      // Update all panels
+      tabPanels.forEach((panel) => {
+        const isTarget = panel.id === targetPanelId;
+        panel.hidden = !isTarget;
+      });
+
+      // Swap image
+      if (tabKey && tabKey in imageMap) {
+        const { webp, png, alt } = imageMap[tabKey];
+        webpSource.srcset = webp;
+        fallbackImg.src = png;
+        fallbackImg.alt = alt;
+      }
+    });
+  });
+</script>

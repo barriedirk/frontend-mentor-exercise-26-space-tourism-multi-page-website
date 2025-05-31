@@ -18,14 +18,15 @@ const { urlActive = "" } = Astro.props;
   <Container className="h-[80px] flex flex-row items-center justify-between">
     <a
       class="header__logo w-[40px] h-[40px] inline-block flex-none basis-[40px]"
-      href="#"
+      href="/"
+      aria-label="Go to homepage"
     >
       <svg class="logo w-[40px] h-[40px]" aria-label="Bookmark logo">
         <use href="./assets/shared/logo.svg#icon-planet"></use>
       </svg>
     </a>
-    <div class="header__separator"></div>
-    <nav class="header__nav" aria-label="Main navigation">
+    <div class="header__separator" aria-hidden="true"></div>
+    <nav class="header__nav" role="navigation" aria-label="Primary navigation">
       <button
         id="headerBtnToggle"
         class="header__toggle bg-transparent border-0"
@@ -35,33 +36,32 @@ const { urlActive = "" } = Astro.props;
       >
         <span class="sr-only">Open/Close button</span>
       </button>
-      <ul id="header-menu" class="header__nav-list text-preset-8" role="menu">
-        <li class="header__nav-item" role="none">
-          <a
-            href="/"
-            class={`header__nav-link ${urlActive === "/" ? "is-active" : ""}`}
-            role="menuitem"><strong>00</strong> Home</a
-          >
-        </li>
-        <li class="header__nav-item" role="none">
-          <a
-            href="/destination"
-            class={`header__nav-link ${urlActive === "/destination" ? "is-active" : ""}`}
-            role="menuitem"><strong>01</strong> Destination</a
-          >
-        </li>
-        <li class="header__nav-item" role="none">
-          <a
-            href="/crew"
-            class={`header__nav-link ${urlActive === "/crew" ? "is-active" : ""}`}
-            role="menuitem"><strong>02</strong> Crew</a
-          >
-        </li>
-        <li class="header__nav-item" role="none">
-          <a href="/technology" class="header__nav-link" role="menuitem"
-            ><strong>03</strong> Technology</a
-          >
-        </li>
+      <ul
+        id="header-menu"
+        class="header__nav-list text-preset-8"
+        role="menubar"
+      >
+        {
+          [
+            { href: "/", label: "Home", index: "00" },
+            { href: "/destination", label: "Destination", index: "01" },
+            { href: "/crew", label: "Crew", index: "02" },
+            { href: "/technology", label: "Technology", index: "03" },
+          ].map(({ href, label, index }) => (
+            <li class="header__nav-item" role="none">
+              <a
+                href={href}
+                role="menuitem"
+                class={`header__nav-link ${
+                  urlActive === href ? "is-active" : ""
+                }`}
+                tabindex="-1"
+              >
+                <strong>{index}</strong> {label}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
   </Container>

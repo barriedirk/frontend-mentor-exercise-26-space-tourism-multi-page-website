@@ -5,6 +5,8 @@ interface Props {
   urlActive?: string;
 }
 
+import { ClientRouter } from "astro:transitions";
+
 import "../styles/global.css";
 
 import Footer from "../components/Footer.astro";
@@ -65,6 +67,8 @@ className += " pt-[80px] lg:pt-[110px] flex flex-col";
     />
 
     <title>{title}</title>
+
+    <ClientRouter />
   </head>
   <body class={className}>
     <Header urlActive={urlActive} />
