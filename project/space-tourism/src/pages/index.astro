@@ -6,10 +6,16 @@ import Container from "../components/Container.astro";
 
 <BaseLayout title="Main Page" urlActive="/">
   <Container className="pt-[100px]">
-    <div class="hero flex gap-12 items-center mx-auto">
+    <div
+      class="hero flex gap-12 items-center mx-auto"
+      aria-labelledby="hero-title"
+      role="region"
+    >
       <div class="hero__header flex flex-col items-center gap-6 md:gap-5">
-        <h1 class="hero__subtitle text-preset-5">So, you want to travel to</h1>
-        <h2 class="hero__title text-preset-1">Space</h2>
+        <h1 id="hero-subtitle" class="hero__subtitle text-preset-5">
+          So, you want to travel to
+        </h1>
+        <h2 id="hero-title" class="hero__title text-preset-1">Space</h2>
         <p class="hero__description text-preset-9 text-center">
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
@@ -18,7 +24,15 @@ import Container from "../components/Container.astro";
         </p>
       </div>
       <div class="hero__explore--wrapper flex flex-col justify-center">
-        <span class="hero__explore text-preset-4"> Explore </span>
+        <a
+          href="/destination"
+          class="hero__explore text-preset-4"
+          role="button"
+          tabindex="0"
+          aria-label="Explore space destinations"
+        >
+          Explore
+        </a>
       </div>
     </div>
   </Container>
@@ -47,10 +61,13 @@ import Container from "../components/Container.astro";
     text-transform: uppercase;
   }
 
-  .hero__explore:hover,
-  .hero__explore:active,
-  .hero__explore:focus-visible {
+  .hero__explore:is(:hover, :active, :focus-visible) {
     box-shadow: 0 0 0 72px var(--clr-infinity);
+  }
+
+  .hero__explore:focus-visible {
+    outline: 2px solid var(--clr-infinity);
+    outline-offset: 4px;
   }
 
   .hero__subtitle,

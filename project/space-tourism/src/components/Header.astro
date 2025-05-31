@@ -37,18 +37,24 @@ const { urlActive = "" } = Astro.props;
       </button>
       <ul id="header-menu" class="header__nav-list text-preset-8" role="menu">
         <li class="header__nav-item" role="none">
-          <a href="/" class="header__nav-link" role="menuitem"
-            ><strong>00</strong> Home</a
+          <a
+            href="/"
+            class={`header__nav-link ${urlActive === "/" ? "is-active" : ""}`}
+            role="menuitem"><strong>00</strong> Home</a
           >
         </li>
         <li class="header__nav-item" role="none">
-          <a href="/destination" class="header__nav-link" role="menuitem"
-            ><strong>01</strong> Destination</a
+          <a
+            href="/destination"
+            class={`header__nav-link ${urlActive === "/destination" ? "is-active" : ""}`}
+            role="menuitem"><strong>01</strong> Destination</a
           >
         </li>
         <li class="header__nav-item" role="none">
-          <a href="/crew" class="header__nav-link" role="menuitem"
-            ><strong>02</strong> Crew</a
+          <a
+            href="/crew"
+            class={`header__nav-link ${urlActive === "/crew" ? "is-active" : ""}`}
+            role="menuitem"><strong>02</strong> Crew</a
           >
         </li>
         <li class="header__nav-item" role="none">
