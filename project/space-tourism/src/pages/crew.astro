@@ -1,7 +1,173 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Container from "../components/Container.astro";
+
+import data from "../data/data.json";
+const { crew } = data;
+
+const {
+  images: { png, webp },
+} = crew[0];
 ---
 
-<BaseLayout title="Crew">
-  <h1>Crew</h1>
+<BaseLayout title="Crew" urlActive="/crew">
+  <Container className="pt-[100px]">
+    <div class="crew mx-auto">
+      <h1
+        id="crew-heading"
+        class="crew__title text-preset-5 flex flex-row items-center justify-center gap-4 uppercase mb-6"
+      >
+        <span class="">02</span> Meet your crew
+      </h1>
+      <section
+        class="crew-information"
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Crew slideshow"
+      >
+        <div
+          class="crew-details slides"
+          role="group"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          {
+            crew.map(({ name, role, bio }, idx) => (
+              <article
+                id={`slide${idx}`}
+                class={`slide slide-${idx}`}
+                role="group"
+                aria-roledescription="slide"
+                aria-label={`${role}: ${name}`}
+                aria-hidden={idx > 0 ? "true" : "false"}
+                hidden={idx > 0}
+              >
+                <h1 class="crew-details__title text-preset-4 uppercase">
+                  {role}
+                </h1>
+
+                <h2 class="crew-details__subtitle text-preset-3 uppercase">
+                  {name}
+                </h2>
+                <p class="crew-details__description text-preset-9">{bio}</p>
+              </article>
+            ))
+          }
+
+          <nav
+            class="slide-indicators flex justify-center gap-4 mt-6"
+            aria-label="Slide navigation"
+          >
+            {
+              crew.map((_, idx) => (
+                <button
+                  type="button"
+                  class="dot"
+                  id={`dot${idx}`}
+                  aria-label={`Go to slide ${idx + 1}`}
+                  aria-current={idx === 0 ? "true" : "false"}
+                />
+              ))
+            }
+          </nav>
+        </div>
+
+        <div class="crew-picture">
+          <picture id="crewImage">
+            <source
+              id="crewImageWebp"
+              src={crew[0].images.webp}
+              type="image/webp"
+            />
+            <img
+              id="crewImageFallback"
+              src={crew[0].images.png}
+              alt={`Portrait of ${crew[0].name}`}
+            />
+          </picture>
+        </div>
+      </section>
+    </div>
+
+    <script define:vars={{ crew }}>
+      let current = 0;
+      const total = crew.length;
+
+      const showSlide = (idx) => {
+        for (let i = 0; i < total; i++) {
+          const slide = document.getElementById(`slide${i}`);
+          const dot = document.getElementById(`dot${i}`);
+          slide.hidden = true;
+          slide.setAttribute("aria-hidden", "true");
+          dot.removeAttribute("aria-current");
+        }
+
+        const currentSlide = document.getElementById(`slide${idx}`);
+        const currentDot = document.getElementById(`dot${idx}`);
+        currentSlide.hidden = false;
+        currentSlide.setAttribute("aria-hidden", "false");
+        currentDot.setAttribute("aria-current", "true");
+
+        const { images, name } = crew[idx];
+        document.getElementById("crewImageWebp").src = images.webp;
+        document.getElementById("crewImageFallback").src = images.png;
+        document.getElementById("crewImageFallback").alt =
+          `Portrait of ${name}`;
+
+        current = idx;
+      };
+
+      // Auto-play every 5s
+      setInterval(() => {
+        const next = (current + 1) % total;
+        showSlide(next);
+      }, 5000);
+
+      // Dot click navigation
+      crew.forEach((_, idx) => {
+        document.getElementById(`dot${idx}`).addEventListener("click", () => {
+          showSlide(idx);
+        });
+      });
+    </script>
+  </Container>
+
+  <style>
+    body {
+      background-image: url("./assets/crew/background-crew-mobile.jpg");
+    }
+
+    .crew__title {
+      text-align: center;
+    }
+    .crew__title span {
+      color: var(--clr-aluminium);
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 9999px;
+      background-color: #888;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dot[aria-current="true"] {
+      background-color: #fff;
+    }
+
+    @media screen and (min-width: 48em) {
+      body {
+        background-image: url("./assets/crew/background-crew-tablet.jpg");
+      }
+    }
+
+    @media screen and (min-width: 90em) {
+      body {
+        background-image: url("./assets/crew/background-crew-desktop.jpg");
+      }
+    }
+  </style>
 </BaseLayout>
