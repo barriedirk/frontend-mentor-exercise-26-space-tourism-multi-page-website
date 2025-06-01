@@ -5,7 +5,7 @@ interface Props {
   urlActive?: string;
 }
 
-import { ClientRouter } from "astro:transitions";
+// import { ClientRouter } from "astro:transitions";
 
 import "../styles/global.css";
 
@@ -68,7 +68,7 @@ className += " pt-[80px] lg:pt-[110px] flex flex-col";
 
     <title>{title}</title>
 
-    <ClientRouter />
+    <!-- <ClientRouter /> -->
   </head>
   <body class={className}>
     <Header urlActive={urlActive} />
