@@ -21,7 +21,8 @@
   font-weight: var(--fw-normal);
   font-size: 3.5rem; /* 56px */
   /* line-height: 2.247rem; 64.2% of 56px */
-  line-height: 0.642;
+  /* line-height: 0.642; */
+  line-height: normal;
   letter-spacing: 0rem;
 }
 
@@ -30,7 +31,8 @@
   font-weight: var(--fw-normal);
   font-size: 2rem; /* 32px */
   /* line-height: 0.734rem; 36.7% of 32px */
-  line-height: 0.367;
+  /* line-height: 0.367; */
+  line-height: normal;
   letter-spacing: 0rem;
 }
 
@@ -89,6 +91,14 @@
     line-height: 1.2;
   }
 
+  .text-preset-3 {
+    font-size: 2.5rem;
+  }
+
+  .text-preset-4 {
+    font-size: 1.5rem;
+  }
+
   .text-preset-5 {
     font-size: 1.25rem;
     letter-spacing: 20%;
@@ -113,8 +123,12 @@
     line-height: 1.2;
   }
 
+  .text-preset-3 {
+    font-size: 1.5rem;
+  }
+
   .text-preset-4 {
-    font-size: 1.25rem; /* 20px */
+    font-size: 1.125rem;
   }
 
   .text-preset-5 {
