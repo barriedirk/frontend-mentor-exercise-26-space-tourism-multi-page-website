@@ -10,7 +10,7 @@ import Container from "../components/Container.astro";
       <h1
         class="destination__title text-preset-5 flex flex-row items-center justify-center gap-4 uppercase mb-6"
       >
-        <span class="">01</span> Pick your destination
+        <span class="color-aluminium">01</span> Pick your destination
       </h1>
       <div class="destination-information">
         <div
@@ -257,71 +257,74 @@ import Container from "../components/Container.astro";
       alt: string;
     }
 
-    const imageMap: Record<CelestialBody, ImageData> = {
-      moon: {
-        webp: "/assets/destination/image-moon.webp",
-        png: "/assets/destination/image-moon.png",
-        alt: "Image of the Moon",
-      },
-      mars: {
-        webp: "/assets/destination/image-mars.webp",
-        png: "/assets/destination/image-mars.png",
-        alt: "Image of Mars",
-      },
-      europa: {
-        webp: "/assets/destination/image-europa.webp",
-        png: "/assets/destination/image-europa.png",
-        alt: "Image of Europa",
-      },
-      titan: {
-        webp: "/assets/destination/image-titan.webp",
-        png: "/assets/destination/image-titan.png",
-        alt: "Image of Titan",
-      },
-    };
+    (() => {
+      const imageMap: Record<CelestialBody, ImageData> = {
+        moon: {
+          webp: "/assets/destination/image-moon.webp",
+          png: "/assets/destination/image-moon.png",
+          alt: "Image of the Moon",
+        },
+        mars: {
+          webp: "/assets/destination/image-mars.webp",
+          png: "/assets/destination/image-mars.png",
+          alt: "Image of Mars",
+        },
+        europa: {
+          webp: "/assets/destination/image-europa.webp",
+          png: "/assets/destination/image-europa.png",
+          alt: "Image of Europa",
+        },
+        titan: {
+          webp: "/assets/destination/image-titan.webp",
+          png: "/assets/destination/image-titan.png",
+          alt: "Image of Titan",
+        },
+      };
 
-    const webpSource = document.getElementById(
-      "celestialImageWebp"
-    ) as HTMLSourceElement;
-    const fallbackImg = document.getElementById(
-      "celestialImageFallback"
-    ) as HTMLImageElement;
+      const webpSource = document.getElementById(
+        "celestialImageWebp"
+      ) as HTMLSourceElement;
+      const fallbackImg = document.getElementById(
+        "celestialImageFallback"
+      ) as HTMLImageElement;
 
-    const tabButtons =
-      document.querySelectorAll<HTMLButtonElement>("[data-tab]");
-    const tabPanels = document.querySelectorAll<HTMLElement>("[role=tabpanel]");
+      const tabButtons =
+        document.querySelectorAll<HTMLButtonElement>("[data-tab]");
+      const tabPanels =
+        document.querySelectorAll<HTMLElement>("[role=tabpanel]");
 
-    console.log({ tabButtons, tabPanels });
+      console.log({ tabButtons, tabPanels });
 
-    tabButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const tabKey = btn.getAttribute("data-tab") as CelestialBody;
-        const targetPanelId = btn.getAttribute("aria-controls");
+      tabButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const tabKey = btn.getAttribute("data-tab") as CelestialBody;
+          const targetPanelId = btn.getAttribute("aria-controls");
 
-        tabButtons.forEach((tab) => {
-          tab.setAttribute("aria-selected", "false");
-          tab.setAttribute("tabindex", "-1");
-          tab.classList.remove("is-active");
+          tabButtons.forEach((tab) => {
+            tab.setAttribute("aria-selected", "false");
+            tab.setAttribute("tabindex", "-1");
+            tab.classList.remove("is-active");
+          });
+
+          btn.setAttribute("aria-selected", "true");
+          btn.setAttribute("tabindex", "0");
+          btn.classList.add("is-active");
+          btn.focus();
+
+          tabPanels.forEach((panel) => {
+            const isTarget = panel.id === targetPanelId;
+            panel.hidden = !isTarget;
+          });
+
+          if (tabKey && tabKey in imageMap) {
+            const { webp, png, alt } = imageMap[tabKey];
+            webpSource.srcset = webp;
+            fallbackImg.src = png;
+            fallbackImg.alt = alt;
+          }
         });
-
-        btn.setAttribute("aria-selected", "true");
-        btn.setAttribute("tabindex", "0");
-        btn.classList.add("is-active");
-        btn.focus();
-
-        tabPanels.forEach((panel) => {
-          const isTarget = panel.id === targetPanelId;
-          panel.hidden = !isTarget;
-        });
-
-        if (tabKey && tabKey in imageMap) {
-          const { webp, png, alt } = imageMap[tabKey];
-          webpSource.srcset = webp;
-          fallbackImg.src = png;
-          fallbackImg.alt = alt;
-        }
       });
-    });
+    })();
   </script>
 </BaseLayout>
 
@@ -362,9 +365,6 @@ import Container from "../components/Container.astro";
 
   .destination__title {
     text-align: center;
-  }
-  .destination__title span {
-    color: var(--clr-aluminium);
   }
 
   .destination .separator {

@@ -50,6 +50,10 @@ body {
   color: var(--clr-blue-300);
 }
 
+.color-aluminium {
+  color: var(--clr-aluminium);
+}
+
 .mask-bottom-fade {
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);

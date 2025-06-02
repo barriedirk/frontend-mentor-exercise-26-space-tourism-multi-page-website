@@ -1,5 +1,6 @@
 .header {
   color: var(--clr-white);
+  z-index: 1;
 }
 
 .header__separator {
