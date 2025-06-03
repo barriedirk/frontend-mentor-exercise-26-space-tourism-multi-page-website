@@ -6,8 +6,6 @@
 @import "./base/base.css";
 @import "./base/typography.css";
 
-/* @import "./base/debug.css"; */
-
 body {
   background-repeat: no-repeat;
   background-position: center;

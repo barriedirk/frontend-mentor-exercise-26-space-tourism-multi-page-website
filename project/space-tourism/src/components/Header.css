@@ -87,45 +87,34 @@
   body::before {
     position: fixed;
     content: "";
+
     top: 0;
     right: 0;
     left: 25%;
     bottom: 0;
 
-    /* background-color: red; */
-    /* filter: blur(3px) contrast(1.2); */
-
-    opacity: 0;
     transform: translateY(-100%);
-
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.1);
-    animation: opacity 3s ease-in-out infinite,
-      waveDistort 8s ease-in-out infinite;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
   }
 
   body.is-expanded::before {
-    opacity: 0.5;
     transform: translateY(0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* source: https://animista.net/play/entrances/slide-in-bck */
+    -webkit-animation: slide-in-bck-center 1s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-bck-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
   body.is-expanded .header__nav-list {
     display: flex;
     position: fixed;
-    top: 100px;
-    left: 30%;
-  }
-
-  @keyframes waveDistort {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+    top: 130px;
+    left: 35%;
+    gap: 35px;
   }
 }
 
@@ -141,5 +130,30 @@
     width: 100%;
     transform: translateX(60px);
     z-index: 1;
+  }
+}
+
+@-webkit-keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+    transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+    transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
   }
 }
