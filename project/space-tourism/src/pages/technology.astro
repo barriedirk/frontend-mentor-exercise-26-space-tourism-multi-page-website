@@ -63,12 +63,11 @@ const {
               technology.map(({ name, description }, idx) => (
                 <article
                   id={`slide${idx}`}
-                  class={`slide slide-${idx}`}
+                  class={`slide slide-${idx} ${idx === 0 ? "visible" : ""}`}
                   role="group"
                   aria-roledescription="slide"
                   aria-label={`${name}`}
                   aria-hidden={idx > 0 ? "true" : "false"}
-                  hidden={idx > 0}
                 >
                   <h2 class="technology-details__title text-preset-4 uppercase color-aluminium">
                     THE TERMINOLOGY…
@@ -124,10 +123,6 @@ const {
   }
 
   .slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
   }
 

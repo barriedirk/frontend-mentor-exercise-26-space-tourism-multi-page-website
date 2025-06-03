@@ -22,38 +22,39 @@ const {
         <span class="color-aluminium">02</span> Meet your crew
       </h1>
       <section class="crew-information" role="region">
-        <div
-          class="crew-details slides"
-          role="group"
-          aria-live="polite"
-          aria-atomic="true"
-          aria-roledescription="carousel"
-          aria-label="Crew slideshow"
-        >
-          {
-            crew.map(({ name, role, bio }, idx) => (
-              <article
-                id={`slide${idx}`}
-                class={`slide slide-${idx}`}
-                role="group"
-                aria-roledescription="slide"
-                aria-label={`${role}: ${name}`}
-                aria-hidden={idx > 0 ? "true" : "false"}
-                hidden={idx > 0}
-              >
-                <h1 class="crew-details__title text-preset-4 uppercase color-aluminium">
-                  {role}
-                </h1>
+        <div class="slides-container">
+          <div
+            class="crew-details slides"
+            role="group"
+            aria-live="polite"
+            aria-atomic="true"
+            aria-roledescription="carousel"
+            aria-label="Crew slideshow"
+          >
+            {
+              crew.map(({ name, role, bio }, idx) => (
+                <article
+                  id={`slide${idx}`}
+                  class={`slide slide-${idx} ${idx === 0 ? "visible" : ""}`}
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label={`${role}: ${name}`}
+                  aria-hidden={idx > 0 ? "true" : "false"}
+                >
+                  <h1 class="crew-details__title text-preset-4 uppercase color-aluminium">
+                    {role}
+                  </h1>
 
-                <h2 class="crew-details__subtitle text-preset-3 uppercase">
-                  {name}
-                </h2>
-                <p class="crew-details__description color-blue-300 text-preset-9">
-                  {bio}
-                </p>
-              </article>
-            ))
-          }
+                  <h2 class="crew-details__subtitle text-preset-3 uppercase">
+                    {name}
+                  </h2>
+                  <p class="crew-details__description color-blue-300 text-preset-9">
+                    {bio}
+                  </p>
+                </article>
+              ))
+            }
+          </div>
 
           <nav
             class="slide-indicators flex justify-center gap-4 mt-22 mb-8"
@@ -104,10 +105,6 @@ const {
   }
 
   .slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
   }
 
@@ -162,7 +159,7 @@ const {
     }
   }
 
-  @media screen and (min-width: 90em) {
+  @media screen and (min-width: 65em) {
     body {
       background-image: url("./assets/crew/background-crew-desktop.jpg");
     }

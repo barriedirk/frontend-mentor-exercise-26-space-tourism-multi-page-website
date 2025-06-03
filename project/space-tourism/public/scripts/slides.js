@@ -18,7 +18,7 @@ export const initializeSlides = ({ data, isCrew, isTechnology }) => {
       const slide = document.getElementById(`slide${i}`);
       const dot = document.getElementById(`dot${i}`);
 
-      slide.hidden = true;
+      slide.classList.remove("visible");
       slide.setAttribute("aria-hidden", "true");
       dot.removeAttribute("aria-current");
     }
@@ -26,9 +26,13 @@ export const initializeSlides = ({ data, isCrew, isTechnology }) => {
     const currentSlide = document.getElementById(`slide${idx}`);
     const currentDot = document.getElementById(`dot${idx}`);
 
-    currentSlide.hidden = false;
+    currentSlide.classList.add("visible");
     currentSlide.setAttribute("aria-hidden", "false");
     currentDot.setAttribute("aria-current", "true");
+
+    const container = document.querySelector(".slides");
+
+    container.style.height = `${currentSlide.offsetHeight}px`;
 
     if (isCrew) {
       const {

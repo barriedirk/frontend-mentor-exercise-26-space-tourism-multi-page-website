@@ -2,8 +2,6 @@
   font-family: var(--ff-bellefair);
   font-weight: var(--fw-normal);
   font-size: 9rem; /* 144px */
-  /* line-height: 15.471rem; 171.9% of 144px */
-  /* line-height: 1.1719; */
   line-height: normal;
   letter-spacing: 0rem;
 }
@@ -20,8 +18,6 @@
   font-family: var(--ff-bellefair);
   font-weight: var(--fw-normal);
   font-size: 3.5rem; /* 56px */
-  /* line-height: 2.247rem; 64.2% of 56px */
-  /* line-height: 0.642; */
   line-height: normal;
   letter-spacing: 0rem;
 }
@@ -30,8 +26,6 @@
   font-family: var(--ff-bellefair);
   font-weight: var(--fw-normal);
   font-size: 2rem; /* 32px */
-  /* line-height: 0.734rem; 36.7% of 32px */
-  /* line-height: 0.367; */
   line-height: normal;
   letter-spacing: 0rem;
 }
@@ -40,8 +34,6 @@
   font-family: var(--ff-barlow);
   font-weight: var(--fw-normal);
   font-size: 1.75rem; /* 28px */
-  /* line-height: 0.588rem; 33.6% of 28px */
-  /* line-height: 0.336; */
   line-height: normal;
   letter-spacing: 0.25rem; /* 4px */
 }
@@ -50,8 +42,6 @@
   font-family: var(--ff-bellefair);
   font-weight: var(--fw-normal);
   font-size: 1.75rem; /* 28px */
-  /* line-height: 0.56175rem; 32.1% of 28px */
-  /* line-height: 0.321; */
   line-height: normal;
   letter-spacing: 0rem;
 }
@@ -60,8 +50,6 @@
   font-family: var(--ff-barlow);
   font-weight: var(--fw-normal);
   font-size: 0.875rem; /* 14px */
-  /* line-height: 0.147rem; 16.8% of 14px */
-  /* line-height: 0.168; */
   line-height: 1;
   letter-spacing: 0.125rem; /* 2px */
 }
@@ -70,7 +58,6 @@
   font-family: var(--ff-barlow);
   font-weight: var(--fw-normal);
   font-size: 1rem; /* 16px */
-  /* line-height: 0.192rem; 19.2% of 16px */
   line-height: normal;
   letter-spacing: 0.125rem; /* 2px */
 }
@@ -79,7 +66,6 @@
   font-family: var(--ff-barlow);
   font-weight: var(--fw-normal);
   font-size: 1.125rem; /* 18px */
-  /* line-height: 2.025rem; 180% of 18px */
   line-height: 1.8;
   letter-spacing: 0rem;
 }
