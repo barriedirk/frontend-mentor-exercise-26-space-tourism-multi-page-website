@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="Astro v5.5.6">
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="Astro v5.5.6" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <base
+      href="https://barriedirk.github.io/frontend-mentor-exercise-26-space-tourism-multi-page-website/"
+    />
 
-    <meta name="author" content="Barrie Freyre">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-    <meta name="linkedin" content="https://www.linkedin.com/in/barriefreyre/">
-    <meta name="github" content="https://github.com/barriedirk">
-    <meta name="frontendmentor" content="https://www.frontendmentor.io/profile/barriedirk">
+    <meta name="author" content="Barrie Freyre" />
 
-    <link rel="me" href="https://www.linkedin.com/in/barriefreyre/">
-    <link rel="me" href="https://github.com/barriedirk">
-    <link rel="me" href="https://www.frontendmentor.io/profile/barriedirk">
+    <meta name="linkedin" content="https://www.linkedin.com/in/barriefreyre/" />
+    <meta name="github" content="https://github.com/barriedirk" />
+    <meta
+      name="frontendmentor"
+      content="https://www.frontendmentor.io/profile/barriedirk"
+    />
+
+    <link rel="me" href="https://www.linkedin.com/in/barriefreyre/" />
+    <link rel="me" href="https://github.com/barriedirk" />
+    <link rel="me" href="https://www.frontendmentor.io/profile/barriedirk" />
 
     <script type="application/ld+json">
       {
@@ -32,138 +44,1241 @@
       }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Frontend Mentor | Space tourism website - Technology</title>
-    <link rel="stylesheet" href="./styles/header.css">
-  <style>/*! tailwindcss v4.1.5 | MIT License | https://tailwindcss.com */@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-border-style:solid;--tw-outline-style:solid}}}@layer theme{:root,:host{--font-sans:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--spacing:.25rem;--container-7xl:80rem;--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab,red,red)){::placeholder{color:color-mix(in oklab,currentcolor 50%,transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer components;@layer utilities{.visible{visibility:visible}.sr-only{clip:rect(0,0,0,0);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.fixed{position:fixed}.static{position:static}.top-0{top:calc(var(--spacing)*0)}.left-0{left:calc(var(--spacing)*0)}.container{width:100%}@media (min-width:40rem){.container{max-width:40rem}}@media (min-width:48rem){.container{max-width:48rem}}@media (min-width:64rem){.container{max-width:64rem}}@media (min-width:80rem){.container{max-width:80rem}}@media (min-width:96rem){.container{max-width:96rem}}.mx-auto{margin-inline:auto}.mt-6{margin-top:calc(var(--spacing)*6)}.mt-22{margin-top:calc(var(--spacing)*22)}.mt-auto{margin-top:auto}.mb-6{margin-bottom:calc(var(--spacing)*6)}.mb-8{margin-bottom:calc(var(--spacing)*8)}.flex{display:flex}.hidden{display:none}.inline-block{display:inline-block}.h-\[40px\]{height:40px}.h-\[80px\]{height:80px}.h-fit{height:fit-content}.w-\[40px\]{width:40px}.w-full{width:100%}.max-w-full{max-width:100%}.flex-none{flex:none}.basis-\[40px\]{flex-basis:40px}.transform{transform:var(--tw-rotate-x,)var(--tw-rotate-y,)var(--tw-rotate-z,)var(--tw-skew-x,)var(--tw-skew-y,)}.flex-col{flex-direction:column}.flex-row{flex-direction:row}.items-center{align-items:center}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.gap-4{gap:calc(var(--spacing)*4)}.gap-5{gap:calc(var(--spacing)*5)}.gap-6{gap:calc(var(--spacing)*6)}.gap-7{gap:calc(var(--spacing)*7)}.gap-12{gap:calc(var(--spacing)*12)}.border{border-style:var(--tw-border-style);border-width:1px}.border-0{border-style:var(--tw-border-style);border-width:0}.bg-transparent{background-color:#0000}.px-\[24px\]{padding-inline:24px}.pt-10{padding-top:calc(var(--spacing)*10)}.pt-\[80px\]{padding-top:80px}.pt-\[100px\]{padding-top:100px}.pb-5{padding-bottom:calc(var(--spacing)*5)}.text-center{text-align:center}.uppercase{text-transform:uppercase}.outline{outline-style:var(--tw-outline-style);outline-width:1px}@media (min-width:48rem){.md\:max-w-7xl{max-width:var(--container-7xl)}.md\:justify-start{justify-content:flex-start}.md\:gap-5{gap:calc(var(--spacing)*5)}}@media (min-width:64rem){.lg\:pt-\[30px\]{padding-top:30px}.lg\:pt-\[110px\]{padding-top:110px}}}:root{--clr-blue-900:#0b0d17;--clr-blue-900-80:#0b0d17cc;--clr-blue-300:#d0d6f9;--clr-white:#fff;--clr-white-60:#fff9;--clr-aluminium:#85868a;--clr-infinity:#262831;--clr-stroke:#4d4e57;--ff-bellefair:"Bellefair",serif;--ff-barlow:"Barlow Condensed",sans-serif;--fw-thin:100;--fw-extralight:200;--fw-light:300;--fw-normal:400;--fw-medium:500;--fw-semibold:600;--fw-bold:700;--fw-extrabold:800;--fw-black:900}html{scroll-behavior:smooth}body{min-height:100dvh;text-rendering:optimizeLegibility;line-height:1.5}picture,img,svg,canvas,video{max-width:100%;display:block}button{cursor:pointer;border:none}h1,h2,h3,h4,h5,h6{text-wrap:balance}p{text-wrap-style:pretty;max-width:66ch}ul,ol{list-style-type:none}input,select,textarea,button{font:inherit;font-weight:inherit;color:inherit}body{font-family:var(--ff-barlow);background-color:var(--clr-blue-900);color:var(--clr-white);font-size:1.125rem}.text-preset-1{font-family:var(--ff-bellefair);font-weight:var(--fw-normal);letter-spacing:0;font-size:9rem;line-height:normal}.text-preset-2{font-family:var(--ff-bellefair);font-weight:var(--fw-normal);letter-spacing:0;font-size:6.25rem;line-height:7.1625rem}.text-preset-3{font-family:var(--ff-bellefair);font-weight:var(--fw-normal);letter-spacing:0;font-size:3.5rem;line-height:normal}.text-preset-4{font-family:var(--ff-bellefair);font-weight:var(--fw-normal);letter-spacing:0;font-size:2rem;line-height:normal}.text-preset-5{font-family:var(--ff-barlow);font-weight:var(--fw-normal);letter-spacing:.25rem;font-size:1.75rem;line-height:normal}.text-preset-6{font-family:var(--ff-bellefair);font-weight:var(--fw-normal);letter-spacing:0;font-size:1.75rem;line-height:normal}.text-preset-7{font-family:var(--ff-barlow);font-weight:var(--fw-normal);letter-spacing:.125rem;font-size:.875rem;line-height:1}.text-preset-8{font-family:var(--ff-barlow);font-weight:var(--fw-normal);letter-spacing:.125rem;font-size:1rem;line-height:normal}.text-preset-9{font-family:var(--ff-barlow);font-weight:var(--fw-normal);letter-spacing:0;font-size:1.125rem;line-height:1.8}@media screen and (max-width:50em){.text-preset-2{letter-spacing:0;font-size:3.5rem;line-height:1.2}.text-preset-3{font-size:2.5rem}.text-preset-4{font-size:1.5rem}.text-preset-5{letter-spacing:20%;font-size:1.25rem}.text-preset-9{letter-spacing:0;font-size:1rem;line-height:1.8}}@media screen and (max-width:31.25em){.text-preset-1{font-size:5rem;line-height:normal}.text-preset-2{letter-spacing:0;font-size:5rem;line-height:1.2}.text-preset-3{font-size:1.5rem}.text-preset-4{font-size:1.125rem}.text-preset-5{font-size:1rem}.text-preset-9{letter-spacing:1.2px;font-size:.9375rem;line-height:1.8}}body{background-position:50%;background-repeat:no-repeat;background-size:cover}.hover-underline{position:relative}.hover-underline:after{content:"";opacity:0;background-color:#0000;width:100%;height:2px;position:absolute;bottom:-28px;left:0}.hover-underline:is(:hover,:active,:focus-visible):after{background-color:var(--clr-aluminium);opacity:1}.hover-underline.is-active:after{background-color:var(--clr-white);opacity:1}.separator{background-color:var(--clr-stroke);width:100%;height:2px;color:var(--clr-stroke)}.color-blue-300{color:var(--clr-blue-300)}.color-aluminium{color:var(--clr-aluminium)}.mask-bottom-fade{-webkit-mask-image:linear-gradient(#000 70%,#0000 100%);mask-image:linear-gradient(#000 70%,#0000)}.slides{position:relative}.slide{opacity:0;filter:blur(10px);pointer-events:none;flex-direction:column;justify-content:center;align-items:center;width:100%;height:100%;transition:opacity .6s,filter .6s;display:flex;position:absolute;top:0;left:0}.slide.visible{opacity:1;filter:blur();pointer-events:auto;position:relative}@property --tw-rotate-x{syntax:"*";inherits:false}@property --tw-rotate-y{syntax:"*";inherits:false}@property --tw-rotate-z{syntax:"*";inherits:false}@property --tw-skew-x{syntax:"*";inherits:false}@property --tw-skew-y{syntax:"*";inherits:false}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-outline-style{syntax:"*";inherits:false;initial-value:solid}footer[data-astro-cid-sz7xmlte]{color:var(--clr-white-60);font-size:10px;text-align:center}
-body{background-image:url(./assets/technology/background-technology-mobile.jpg)}.technology-information[data-astro-cid-zpgh5vpc]{margin-top:110px}.technology-picture[data-astro-cid-zpgh5vpc] img[data-astro-cid-zpgh5vpc]{height:258px;width:100%;transform:scale(1.13);overflow:hidden;object-fit:cover}.technology__title[data-astro-cid-zpgh5vpc]{text-align:center}.slide-indicators[data-astro-cid-zpgh5vpc]{margin-top:50px;margin-bottom:40px}.slide[data-astro-cid-zpgh5vpc]{gap:20px}.slide[data-astro-cid-zpgh5vpc] [data-astro-cid-zpgh5vpc]:nth-child(3){text-align:center}.dot[data-astro-cid-zpgh5vpc]{display:flex;flex-direction:column;justify-content:center;align-items:center;color:var(--clr-white);background-color:var(--clr-blue-900);width:40px;height:auto;aspect-ratio:1 / 1;border-radius:9999px;border:1px solid var(--clr-stroke);cursor:pointer}.dot[data-astro-cid-zpgh5vpc][aria-current=true]{color:var(--clr-blue-900);background-color:var(--clr-white);border-color:var(--clr-white)}@media screen and (min-width: 48em){body{background-image:url(./assets/technology/background-technology-tablet.jpg)}.technology-picture[data-astro-cid-zpgh5vpc] img[data-astro-cid-zpgh5vpc]{height:356px}.dot[data-astro-cid-zpgh5vpc]{width:56px}.slide-indicators[data-astro-cid-zpgh5vpc]{margin-top:60px;margin-bottom:50px}}@media screen and (min-width: 74.375em){body{background-image:url(./assets/technology/background-technology-desktop.jpg)}.technology-picture[data-astro-cid-zpgh5vpc] img[data-astro-cid-zpgh5vpc]{height:600px}.dot[data-astro-cid-zpgh5vpc]{width:80px}.technology-information[data-astro-cid-zpgh5vpc],.technology-details[data-astro-cid-zpgh5vpc]{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:40px}.slide[data-astro-cid-zpgh5vpc]{align-items:flex-start;width:491px}.slide[data-astro-cid-zpgh5vpc] [data-astro-cid-zpgh5vpc]:nth-child(3){text-align:left}.slide-indicators[data-astro-cid-zpgh5vpc]{flex-direction:column;gap:40px}.technology-picture[data-astro-cid-zpgh5vpc]{order:1;max-width:608px;transform:translate(40px)}.technology-picture[data-astro-cid-zpgh5vpc] img[data-astro-cid-zpgh5vpc]{transform:scale(1);contain:cover}}
-</style></head>
-  <body class=" pt-[80px] lg:pt-[110px] flex flex-col">
-    <header id="header" class="header h-fit fixed top-0 left-0 w-full lg:pt-[30px]" role="banner">
-  <div class="h-[80px] flex flex-row items-center justify-between px-[24px] mx-auto max-w-full md:max-w-7xl">
-  
-    <a class="header__logo w-[40px] h-[40px] inline-block flex-none basis-[40px]" href="/" aria-label="Go to homepage">
-      <svg class="logo w-[40px] h-[40px]" aria-label="Bookmark logo">
-        <use href="./assets/shared/logo.svg#icon-planet"></use>
-      </svg>
-    </a>
-    <div class="header__separator" aria-hidden="true"></div>
-    <nav class="header__nav" role="navigation" aria-label="Primary navigation">
-      <button id="headerBtnToggle" class="header__toggle bg-transparent border-0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="header-menu">
-        <span class="sr-only">Open/Close button</span>
-      </button>
-      <ul id="header-menu" class="header__nav-list text-preset-8" role="menubar">
-        <li class="header__nav-item" role="none">
-              <a href="/" role="menuitem" class="header__nav-link hover-underline " tabindex="-1">
+    <link rel="stylesheet" href="./styles/header.css" />
+    <style>
+      /*! tailwindcss v4.1.5 | MIT License | https://tailwindcss.com */
+      @layer properties {
+        @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or
+          ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
+          *,
+          :before,
+          :after,
+          ::backdrop {
+            --tw-rotate-x: initial;
+            --tw-rotate-y: initial;
+            --tw-rotate-z: initial;
+            --tw-skew-x: initial;
+            --tw-skew-y: initial;
+            --tw-border-style: solid;
+            --tw-outline-style: solid;
+          }
+        }
+      }
+      @layer theme {
+        :root,
+        :host {
+          --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+            "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+          --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+            "Liberation Mono", "Courier New", monospace;
+          --spacing: 0.25rem;
+          --container-7xl: 80rem;
+          --default-font-family: var(--font-sans);
+          --default-mono-font-family: var(--font-mono);
+        }
+      }
+      @layer base {
+        *,
+        :after,
+        :before,
+        ::backdrop {
+          box-sizing: border-box;
+          border: 0 solid;
+          margin: 0;
+          padding: 0;
+        }
+        ::file-selector-button {
+          box-sizing: border-box;
+          border: 0 solid;
+          margin: 0;
+          padding: 0;
+        }
+        html,
+        :host {
+          -webkit-text-size-adjust: 100%;
+          tab-size: 4;
+          line-height: 1.5;
+          font-family: var(
+            --default-font-family,
+            ui-sans-serif,
+            system-ui,
+            sans-serif,
+            "Apple Color Emoji",
+            "Segoe UI Emoji",
+            "Segoe UI Symbol",
+            "Noto Color Emoji"
+          );
+          font-feature-settings: var(--default-font-feature-settings, normal);
+          font-variation-settings: var(
+            --default-font-variation-settings,
+            normal
+          );
+          -webkit-tap-highlight-color: transparent;
+        }
+        hr {
+          height: 0;
+          color: inherit;
+          border-top-width: 1px;
+        }
+        abbr:where([title]) {
+          -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-size: inherit;
+          font-weight: inherit;
+        }
+        a {
+          color: inherit;
+          -webkit-text-decoration: inherit;
+          text-decoration: inherit;
+        }
+        b,
+        strong {
+          font-weight: bolder;
+        }
+        code,
+        kbd,
+        samp,
+        pre {
+          font-family: var(
+            --default-mono-font-family,
+            ui-monospace,
+            SFMono-Regular,
+            Menlo,
+            Monaco,
+            Consolas,
+            "Liberation Mono",
+            "Courier New",
+            monospace
+          );
+          font-feature-settings: var(
+            --default-mono-font-feature-settings,
+            normal
+          );
+          font-variation-settings: var(
+            --default-mono-font-variation-settings,
+            normal
+          );
+          font-size: 1em;
+        }
+        small {
+          font-size: 80%;
+        }
+        sub,
+        sup {
+          vertical-align: baseline;
+          font-size: 75%;
+          line-height: 0;
+          position: relative;
+        }
+        sub {
+          bottom: -0.25em;
+        }
+        sup {
+          top: -0.5em;
+        }
+        table {
+          text-indent: 0;
+          border-color: inherit;
+          border-collapse: collapse;
+        }
+        :-moz-focusring {
+          outline: auto;
+        }
+        progress {
+          vertical-align: baseline;
+        }
+        summary {
+          display: list-item;
+        }
+        ol,
+        ul,
+        menu {
+          list-style: none;
+        }
+        img,
+        svg,
+        video,
+        canvas,
+        audio,
+        iframe,
+        embed,
+        object {
+          vertical-align: middle;
+          display: block;
+        }
+        img,
+        video {
+          max-width: 100%;
+          height: auto;
+        }
+        button,
+        input,
+        select,
+        optgroup,
+        textarea {
+          font: inherit;
+          font-feature-settings: inherit;
+          font-variation-settings: inherit;
+          letter-spacing: inherit;
+          color: inherit;
+          opacity: 1;
+          background-color: #0000;
+          border-radius: 0;
+        }
+        ::file-selector-button {
+          font: inherit;
+          font-feature-settings: inherit;
+          font-variation-settings: inherit;
+          letter-spacing: inherit;
+          color: inherit;
+          opacity: 1;
+          background-color: #0000;
+          border-radius: 0;
+        }
+        :where(select:is([multiple], [size])) optgroup {
+          font-weight: bolder;
+        }
+        :where(select:is([multiple], [size])) optgroup option {
+          padding-inline-start: 20px;
+        }
+        ::file-selector-button {
+          margin-inline-end: 4px;
+        }
+        ::placeholder {
+          opacity: 1;
+        }
+        @supports (not ((-webkit-appearance: -apple-pay-button))) or
+          (contain-intrinsic-size: 1px) {
+          ::placeholder {
+            color: currentColor;
+          }
+          @supports (color: color-mix(in lab, red, red)) {
+            ::placeholder {
+              color: color-mix(in oklab, currentcolor 50%, transparent);
+            }
+          }
+        }
+        textarea {
+          resize: vertical;
+        }
+        ::-webkit-search-decoration {
+          -webkit-appearance: none;
+        }
+        ::-webkit-date-and-time-value {
+          min-height: 1lh;
+          text-align: inherit;
+        }
+        ::-webkit-datetime-edit {
+          display: inline-flex;
+        }
+        ::-webkit-datetime-edit-fields-wrapper {
+          padding: 0;
+        }
+        ::-webkit-datetime-edit {
+          padding-block: 0;
+        }
+        ::-webkit-datetime-edit-year-field {
+          padding-block: 0;
+        }
+        ::-webkit-datetime-edit-month-field {
+          padding-block: 0;
+        }
+        ::-webkit-datetime-edit-day-field {
+          padding-block: 0;
+        }
+        ::-webkit-datetime-edit-hour-field {
+          padding-block: 0;
+        }
+        ::-webkit-datetime-edit-minute-field {
+          padding-block: 0;
+        }
+        ::-webkit-datetime-edit-second-field {
+          padding-block: 0;
+        }
+        ::-webkit-datetime-edit-millisecond-field {
+          padding-block: 0;
+        }
+        ::-webkit-datetime-edit-meridiem-field {
+          padding-block: 0;
+        }
+        :-moz-ui-invalid {
+          box-shadow: none;
+        }
+        button,
+        input:where([type="button"], [type="reset"], [type="submit"]) {
+          appearance: button;
+        }
+        ::file-selector-button {
+          appearance: button;
+        }
+        ::-webkit-inner-spin-button {
+          height: auto;
+        }
+        ::-webkit-outer-spin-button {
+          height: auto;
+        }
+        [hidden]:where(:not([hidden="until-found"])) {
+          display: none !important;
+        }
+      }
+      @layer components;
+      @layer utilities {
+        .visible {
+          visibility: visible;
+        }
+        .sr-only {
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border-width: 0;
+          width: 1px;
+          height: 1px;
+          margin: -1px;
+          padding: 0;
+          position: absolute;
+          overflow: hidden;
+        }
+        .fixed {
+          position: fixed;
+        }
+        .static {
+          position: static;
+        }
+        .top-0 {
+          top: calc(var(--spacing) * 0);
+        }
+        .left-0 {
+          left: calc(var(--spacing) * 0);
+        }
+        .container {
+          width: 100%;
+        }
+        @media (min-width: 40rem) {
+          .container {
+            max-width: 40rem;
+          }
+        }
+        @media (min-width: 48rem) {
+          .container {
+            max-width: 48rem;
+          }
+        }
+        @media (min-width: 64rem) {
+          .container {
+            max-width: 64rem;
+          }
+        }
+        @media (min-width: 80rem) {
+          .container {
+            max-width: 80rem;
+          }
+        }
+        @media (min-width: 96rem) {
+          .container {
+            max-width: 96rem;
+          }
+        }
+        .mx-auto {
+          margin-inline: auto;
+        }
+        .mt-6 {
+          margin-top: calc(var(--spacing) * 6);
+        }
+        .mt-22 {
+          margin-top: calc(var(--spacing) * 22);
+        }
+        .mt-auto {
+          margin-top: auto;
+        }
+        .mb-6 {
+          margin-bottom: calc(var(--spacing) * 6);
+        }
+        .mb-8 {
+          margin-bottom: calc(var(--spacing) * 8);
+        }
+        .flex {
+          display: flex;
+        }
+        .hidden {
+          display: none;
+        }
+        .inline-block {
+          display: inline-block;
+        }
+        .h-\[40px\] {
+          height: 40px;
+        }
+        .h-\[80px\] {
+          height: 80px;
+        }
+        .h-fit {
+          height: fit-content;
+        }
+        .w-\[40px\] {
+          width: 40px;
+        }
+        .w-full {
+          width: 100%;
+        }
+        .max-w-full {
+          max-width: 100%;
+        }
+        .flex-none {
+          flex: none;
+        }
+        .basis-\[40px\] {
+          flex-basis: 40px;
+        }
+        .transform {
+          transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z)
+            var(--tw-skew-x) var(--tw-skew-y);
+        }
+        .flex-col {
+          flex-direction: column;
+        }
+        .flex-row {
+          flex-direction: row;
+        }
+        .items-center {
+          align-items: center;
+        }
+        .justify-between {
+          justify-content: space-between;
+        }
+        .justify-center {
+          justify-content: center;
+        }
+        .gap-4 {
+          gap: calc(var(--spacing) * 4);
+        }
+        .gap-5 {
+          gap: calc(var(--spacing) * 5);
+        }
+        .gap-6 {
+          gap: calc(var(--spacing) * 6);
+        }
+        .gap-7 {
+          gap: calc(var(--spacing) * 7);
+        }
+        .gap-12 {
+          gap: calc(var(--spacing) * 12);
+        }
+        .border {
+          border-style: var(--tw-border-style);
+          border-width: 1px;
+        }
+        .border-0 {
+          border-style: var(--tw-border-style);
+          border-width: 0;
+        }
+        .bg-transparent {
+          background-color: #0000;
+        }
+        .px-\[24px\] {
+          padding-inline: 24px;
+        }
+        .pt-10 {
+          padding-top: calc(var(--spacing) * 10);
+        }
+        .pt-\[80px\] {
+          padding-top: 80px;
+        }
+        .pt-\[100px\] {
+          padding-top: 100px;
+        }
+        .pb-5 {
+          padding-bottom: calc(var(--spacing) * 5);
+        }
+        .text-center {
+          text-align: center;
+        }
+        .uppercase {
+          text-transform: uppercase;
+        }
+        .outline {
+          outline-style: var(--tw-outline-style);
+          outline-width: 1px;
+        }
+        @media (min-width: 48rem) {
+          .md\:max-w-7xl {
+            max-width: var(--container-7xl);
+          }
+          .md\:justify-start {
+            justify-content: flex-start;
+          }
+          .md\:gap-5 {
+            gap: calc(var(--spacing) * 5);
+          }
+        }
+        @media (min-width: 64rem) {
+          .lg\:pt-\[30px\] {
+            padding-top: 30px;
+          }
+          .lg\:pt-\[110px\] {
+            padding-top: 110px;
+          }
+        }
+      }
+      :root {
+        --clr-blue-900: #0b0d17;
+        --clr-blue-900-80: #0b0d17cc;
+        --clr-blue-300: #d0d6f9;
+        --clr-white: #fff;
+        --clr-white-60: #fff9;
+        --clr-aluminium: #85868a;
+        --clr-infinity: #262831;
+        --clr-stroke: #4d4e57;
+        --ff-bellefair: "Bellefair", serif;
+        --ff-barlow: "Barlow Condensed", sans-serif;
+        --fw-thin: 100;
+        --fw-extralight: 200;
+        --fw-light: 300;
+        --fw-normal: 400;
+        --fw-medium: 500;
+        --fw-semibold: 600;
+        --fw-bold: 700;
+        --fw-extrabold: 800;
+        --fw-black: 900;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        min-height: 100dvh;
+        text-rendering: optimizeLegibility;
+        line-height: 1.5;
+      }
+      picture,
+      img,
+      svg,
+      canvas,
+      video {
+        max-width: 100%;
+        display: block;
+      }
+      button {
+        cursor: pointer;
+        border: none;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-wrap: balance;
+      }
+      p {
+        text-wrap-style: pretty;
+        max-width: 66ch;
+      }
+      ul,
+      ol {
+        list-style-type: none;
+      }
+      input,
+      select,
+      textarea,
+      button {
+        font: inherit;
+        font-weight: inherit;
+        color: inherit;
+      }
+      body {
+        font-family: var(--ff-barlow);
+        background-color: var(--clr-blue-900);
+        color: var(--clr-white);
+        font-size: 1.125rem;
+      }
+      .text-preset-1 {
+        font-family: var(--ff-bellefair);
+        font-weight: var(--fw-normal);
+        letter-spacing: 0;
+        font-size: 9rem;
+        line-height: normal;
+      }
+      .text-preset-2 {
+        font-family: var(--ff-bellefair);
+        font-weight: var(--fw-normal);
+        letter-spacing: 0;
+        font-size: 6.25rem;
+        line-height: 7.1625rem;
+      }
+      .text-preset-3 {
+        font-family: var(--ff-bellefair);
+        font-weight: var(--fw-normal);
+        letter-spacing: 0;
+        font-size: 3.5rem;
+        line-height: normal;
+      }
+      .text-preset-4 {
+        font-family: var(--ff-bellefair);
+        font-weight: var(--fw-normal);
+        letter-spacing: 0;
+        font-size: 2rem;
+        line-height: normal;
+      }
+      .text-preset-5 {
+        font-family: var(--ff-barlow);
+        font-weight: var(--fw-normal);
+        letter-spacing: 0.25rem;
+        font-size: 1.75rem;
+        line-height: normal;
+      }
+      .text-preset-6 {
+        font-family: var(--ff-bellefair);
+        font-weight: var(--fw-normal);
+        letter-spacing: 0;
+        font-size: 1.75rem;
+        line-height: normal;
+      }
+      .text-preset-7 {
+        font-family: var(--ff-barlow);
+        font-weight: var(--fw-normal);
+        letter-spacing: 0.125rem;
+        font-size: 0.875rem;
+        line-height: 1;
+      }
+      .text-preset-8 {
+        font-family: var(--ff-barlow);
+        font-weight: var(--fw-normal);
+        letter-spacing: 0.125rem;
+        font-size: 1rem;
+        line-height: normal;
+      }
+      .text-preset-9 {
+        font-family: var(--ff-barlow);
+        font-weight: var(--fw-normal);
+        letter-spacing: 0;
+        font-size: 1.125rem;
+        line-height: 1.8;
+      }
+      @media screen and (max-width: 50em) {
+        .text-preset-2 {
+          letter-spacing: 0;
+          font-size: 3.5rem;
+          line-height: 1.2;
+        }
+        .text-preset-3 {
+          font-size: 2.5rem;
+        }
+        .text-preset-4 {
+          font-size: 1.5rem;
+        }
+        .text-preset-5 {
+          letter-spacing: 20%;
+          font-size: 1.25rem;
+        }
+        .text-preset-9 {
+          letter-spacing: 0;
+          font-size: 1rem;
+          line-height: 1.8;
+        }
+      }
+      @media screen and (max-width: 31.25em) {
+        .text-preset-1 {
+          font-size: 5rem;
+          line-height: normal;
+        }
+        .text-preset-2 {
+          letter-spacing: 0;
+          font-size: 5rem;
+          line-height: 1.2;
+        }
+        .text-preset-3 {
+          font-size: 1.5rem;
+        }
+        .text-preset-4 {
+          font-size: 1.125rem;
+        }
+        .text-preset-5 {
+          font-size: 1rem;
+        }
+        .text-preset-9 {
+          letter-spacing: 1.2px;
+          font-size: 0.9375rem;
+          line-height: 1.8;
+        }
+      }
+      body {
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .hover-underline {
+        position: relative;
+      }
+      .hover-underline:after {
+        content: "";
+        opacity: 0;
+        background-color: #0000;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        bottom: -28px;
+        left: 0;
+      }
+      .hover-underline:is(:hover, :active, :focus-visible):after {
+        background-color: var(--clr-aluminium);
+        opacity: 1;
+      }
+      .hover-underline.is-active:after {
+        background-color: var(--clr-white);
+        opacity: 1;
+      }
+      .separator {
+        background-color: var(--clr-stroke);
+        width: 100%;
+        height: 2px;
+        color: var(--clr-stroke);
+      }
+      .color-blue-300 {
+        color: var(--clr-blue-300);
+      }
+      .color-aluminium {
+        color: var(--clr-aluminium);
+      }
+      .mask-bottom-fade {
+        -webkit-mask-image: linear-gradient(#000 70%, #0000 100%);
+        mask-image: linear-gradient(#000 70%, #0000);
+      }
+      .slides {
+        position: relative;
+      }
+      .slide {
+        opacity: 0;
+        filter: blur(10px);
+        pointer-events: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.6s, filter 0.6s;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .slide.visible {
+        opacity: 1;
+        filter: blur();
+        pointer-events: auto;
+        position: relative;
+      }
+      @property --tw-rotate-x {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-rotate-y {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-rotate-z {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-skew-x {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-skew-y {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-border-style {
+        syntax: "*";
+        inherits: false;
+        initial-value: solid;
+      }
+      @property --tw-outline-style {
+        syntax: "*";
+        inherits: false;
+        initial-value: solid;
+      }
+      footer[data-astro-cid-sz7xmlte] {
+        color: var(--clr-white-60);
+        font-size: 10px;
+        text-align: center;
+      }
+      body {
+        background-image: url(./assets/technology/background-technology-mobile.jpg);
+      }
+      .technology-information[data-astro-cid-zpgh5vpc] {
+        margin-top: 110px;
+      }
+      .technology-picture[data-astro-cid-zpgh5vpc]
+        img[data-astro-cid-zpgh5vpc] {
+        height: 258px;
+        width: 100%;
+        transform: scale(1.13);
+        overflow: hidden;
+        object-fit: cover;
+      }
+      .technology__title[data-astro-cid-zpgh5vpc] {
+        text-align: center;
+      }
+      .slide-indicators[data-astro-cid-zpgh5vpc] {
+        margin-top: 50px;
+        margin-bottom: 40px;
+      }
+      .slide[data-astro-cid-zpgh5vpc] {
+        gap: 20px;
+      }
+      .slide[data-astro-cid-zpgh5vpc] [data-astro-cid-zpgh5vpc]:nth-child(3) {
+        text-align: center;
+      }
+      .dot[data-astro-cid-zpgh5vpc] {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--clr-white);
+        background-color: var(--clr-blue-900);
+        width: 40px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        border-radius: 9999px;
+        border: 1px solid var(--clr-stroke);
+        cursor: pointer;
+      }
+      .dot[data-astro-cid-zpgh5vpc][aria-current="true"] {
+        color: var(--clr-blue-900);
+        background-color: var(--clr-white);
+        border-color: var(--clr-white);
+      }
+      @media screen and (min-width: 48em) {
+        body {
+          background-image: url(./assets/technology/background-technology-tablet.jpg);
+        }
+        .technology-picture[data-astro-cid-zpgh5vpc]
+          img[data-astro-cid-zpgh5vpc] {
+          height: 356px;
+        }
+        .dot[data-astro-cid-zpgh5vpc] {
+          width: 56px;
+        }
+        .slide-indicators[data-astro-cid-zpgh5vpc] {
+          margin-top: 60px;
+          margin-bottom: 50px;
+        }
+      }
+      @media screen and (min-width: 74.375em) {
+        body {
+          background-image: url(./assets/technology/background-technology-desktop.jpg);
+        }
+        .technology-picture[data-astro-cid-zpgh5vpc]
+          img[data-astro-cid-zpgh5vpc] {
+          height: 600px;
+        }
+        .dot[data-astro-cid-zpgh5vpc] {
+          width: 80px;
+        }
+        .technology-information[data-astro-cid-zpgh5vpc],
+        .technology-details[data-astro-cid-zpgh5vpc] {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 40px;
+        }
+        .slide[data-astro-cid-zpgh5vpc] {
+          align-items: flex-start;
+          width: 491px;
+        }
+        .slide[data-astro-cid-zpgh5vpc] [data-astro-cid-zpgh5vpc]:nth-child(3) {
+          text-align: left;
+        }
+        .slide-indicators[data-astro-cid-zpgh5vpc] {
+          flex-direction: column;
+          gap: 40px;
+        }
+        .technology-picture[data-astro-cid-zpgh5vpc] {
+          order: 1;
+          max-width: 608px;
+          transform: translate(40px);
+        }
+        .technology-picture[data-astro-cid-zpgh5vpc]
+          img[data-astro-cid-zpgh5vpc] {
+          transform: scale(1);
+          contain: cover;
+        }
+      }
+    </style>
+  </head>
+  <body class="pt-[80px] lg:pt-[110px] flex flex-col">
+    <header
+      id="header"
+      class="header h-fit fixed top-0 left-0 w-full lg:pt-[30px]"
+      role="banner"
+    >
+      <div
+        class="h-[80px] flex flex-row items-center justify-between px-[24px] mx-auto max-w-full md:max-w-7xl"
+      >
+        <a
+          class="header__logo w-[40px] h-[40px] inline-block flex-none basis-[40px]"
+          href="/"
+          aria-label="Go to homepage"
+        >
+          <svg class="logo w-[40px] h-[40px]" aria-label="Bookmark logo">
+            <use href="./assets/shared/logo.svg#icon-planet"></use>
+          </svg>
+        </a>
+        <div class="header__separator" aria-hidden="true"></div>
+        <nav
+          class="header__nav"
+          role="navigation"
+          aria-label="Primary navigation"
+        >
+          <button
+            id="headerBtnToggle"
+            class="header__toggle bg-transparent border-0"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="header-menu"
+          >
+            <span class="sr-only">Open/Close button</span>
+          </button>
+          <ul
+            id="header-menu"
+            class="header__nav-list text-preset-8"
+            role="menubar"
+          >
+            <li class="header__nav-item" role="none">
+              <a
+                href="/"
+                role="menuitem"
+                class="header__nav-link hover-underline"
+                tabindex="-1"
+              >
                 <strong>00</strong> Home
               </a>
-            </li><li class="header__nav-item" role="none">
-              <a href="/destination" role="menuitem" class="header__nav-link hover-underline " tabindex="-1">
+            </li>
+            <li class="header__nav-item" role="none">
+              <a
+                href="/destination"
+                role="menuitem"
+                class="header__nav-link hover-underline"
+                tabindex="-1"
+              >
                 <strong>01</strong> Destination
               </a>
-            </li><li class="header__nav-item" role="none">
-              <a href="/crew" role="menuitem" class="header__nav-link hover-underline " tabindex="-1">
+            </li>
+            <li class="header__nav-item" role="none">
+              <a
+                href="/crew"
+                role="menuitem"
+                class="header__nav-link hover-underline"
+                tabindex="-1"
+              >
                 <strong>02</strong> Crew
               </a>
-            </li><li class="header__nav-item" role="none">
-              <a href="/technology" role="menuitem" class="header__nav-link hover-underline is-active" tabindex="-1">
+            </li>
+            <li class="header__nav-item" role="none">
+              <a
+                href="/technology"
+                role="menuitem"
+                class="header__nav-link hover-underline is-active"
+                tabindex="-1"
+              >
                 <strong>03</strong> Technology
               </a>
             </li>
-      </ul>
-    </nav>
-  
-</div>
-</header>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-<script type="module">const a=document.querySelector("body"),e=document.querySelector("#headerBtnToggle"),n=document.querySelectorAll(".header__nav-link");n.forEach(t=>{t.addEventListener("click",()=>{a.classList.remove("is-expanded"),e.setAttribute("aria-expanded","false")})});e.addEventListener("click",async t=>{t.preventDefault();const d=e.getAttribute("aria-expanded")=="true";e.setAttribute("aria-expanded",d?"false":"true"),d?a.classList.remove("is-expanded"):a.classList.add("is-expanded")});</script>
+    <script type="module">
+      const a = document.querySelector("body"),
+        e = document.querySelector("#headerBtnToggle"),
+        n = document.querySelectorAll(".header__nav-link");
+      n.forEach((t) => {
+        t.addEventListener("click", () => {
+          a.classList.remove("is-expanded"),
+            e.setAttribute("aria-expanded", "false");
+        });
+      });
+      e.addEventListener("click", async (t) => {
+        t.preventDefault();
+        const d = e.getAttribute("aria-expanded") == "true";
+        e.setAttribute("aria-expanded", d ? "false" : "true"),
+          d
+            ? a.classList.remove("is-expanded")
+            : a.classList.add("is-expanded");
+      });
+    </script>
     <main>
-      
-  <div class="pt-[100px] px-[24px] mx-auto max-w-full md:max-w-7xl">
-  
-    <div class="technology mx-auto" aria-describedby="technology-heading" data-astro-cid-zpgh5vpc>
-      <h1 id="technology-heading" class="technology__title text-preset-5 flex flex-row items-center justify-center md:justify-start gap-4 uppercase mb-6" data-astro-cid-zpgh5vpc>
-        <span class="color-aluminium" data-astro-cid-zpgh5vpc>03</span> Space launch 101
-      </h1>
-      <section class="technology-information" role="region" data-astro-cid-zpgh5vpc>
-        <div class="technology-picture" data-astro-cid-zpgh5vpc>
-          <picture data-astro-cid-zpgh5vpc>
-            <source id="technologyPictureSrcset" media="(min-width: 769px)" srcset="./assets/technology/image-launch-vehicle-landscape.jpg" data-astro-cid-zpgh5vpc>
-            <img id="technologyPictureSrc" src="./assets/technology/image-launch-vehicle-portrait.jpg" alt="Launch vehicle" data-astro-cid-zpgh5vpc>
-          </picture>
-        </div>
-        <div class="technology-details" role="region" data-astro-cid-zpgh5vpc>
-          <nav class="slide-indicators flex justify-center gap-5" aria-label="Slide navigation" data-astro-cid-zpgh5vpc>
-            <button type="button" class="dot text-preset-4" id="dot0" aria-label="Go to slide 1" aria-current="true" data-astro-cid-zpgh5vpc>
-                  1
-                </button><button type="button" class="dot text-preset-4" id="dot1" aria-label="Go to slide 2" aria-current="false" data-astro-cid-zpgh5vpc>
-                  2
-                </button><button type="button" class="dot text-preset-4" id="dot2" aria-label="Go to slide 3" aria-current="false" data-astro-cid-zpgh5vpc>
+      <div class="pt-[100px] px-[24px] mx-auto max-w-full md:max-w-7xl">
+        <div
+          class="technology mx-auto"
+          aria-describedby="technology-heading"
+          data-astro-cid-zpgh5vpc
+        >
+          <h1
+            id="technology-heading"
+            class="technology__title text-preset-5 flex flex-row items-center justify-center md:justify-start gap-4 uppercase mb-6"
+            data-astro-cid-zpgh5vpc
+          >
+            <span class="color-aluminium" data-astro-cid-zpgh5vpc>03</span>
+            Space launch 101
+          </h1>
+          <section
+            class="technology-information"
+            role="region"
+            data-astro-cid-zpgh5vpc
+          >
+            <div class="technology-picture" data-astro-cid-zpgh5vpc>
+              <picture data-astro-cid-zpgh5vpc>
+                <source
+                  id="technologyPictureSrcset"
+                  media="(min-width: 769px)"
+                  srcset="
+                    ./assets/technology/image-launch-vehicle-landscape.jpg
+                  "
+                  data-astro-cid-zpgh5vpc
+                />
+                <img
+                  id="technologyPictureSrc"
+                  src="./assets/technology/image-launch-vehicle-portrait.jpg"
+                  alt="Launch vehicle"
+                  data-astro-cid-zpgh5vpc
+                />
+              </picture>
+            </div>
+            <div
+              class="technology-details"
+              role="region"
+              data-astro-cid-zpgh5vpc
+            >
+              <nav
+                class="slide-indicators flex justify-center gap-5"
+                aria-label="Slide navigation"
+                data-astro-cid-zpgh5vpc
+              >
+                <button
+                  type="button"
+                  class="dot text-preset-4"
+                  id="dot0"
+                  aria-label="Go to slide 1"
+                  aria-current="true"
+                  data-astro-cid-zpgh5vpc
+                >
+                  1</button
+                ><button
+                  type="button"
+                  class="dot text-preset-4"
+                  id="dot1"
+                  aria-label="Go to slide 2"
+                  aria-current="false"
+                  data-astro-cid-zpgh5vpc
+                >
+                  2</button
+                ><button
+                  type="button"
+                  class="dot text-preset-4"
+                  id="dot2"
+                  aria-label="Go to slide 3"
+                  aria-current="false"
+                  data-astro-cid-zpgh5vpc
+                >
                   3
                 </button>
-          </nav>
+              </nav>
 
-          <div class="technology-contain slides" role="group" aria-live="polite" aria-atomic="true" aria-roledescription="carousel" aria-label="Technology slideshow" data-astro-cid-zpgh5vpc>
-            <article id="slide0" class="slide slide-0 visible" role="group" aria-roledescription="slide" aria-label="Launch vehicle" aria-hidden="false" data-astro-cid-zpgh5vpc>
-                  <h2 class="technology-details__title text-preset-4 uppercase color-aluminium" data-astro-cid-zpgh5vpc>
+              <div
+                class="technology-contain slides"
+                role="group"
+                aria-live="polite"
+                aria-atomic="true"
+                aria-roledescription="carousel"
+                aria-label="Technology slideshow"
+                data-astro-cid-zpgh5vpc
+              >
+                <article
+                  id="slide0"
+                  class="slide slide-0 visible"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Launch vehicle"
+                  aria-hidden="false"
+                  data-astro-cid-zpgh5vpc
+                >
+                  <h2
+                    class="technology-details__title text-preset-4 uppercase color-aluminium"
+                    data-astro-cid-zpgh5vpc
+                  >
                     THE TERMINOLOGY…
                   </h2>
 
-                  <h3 class="technology-details__subtitle text-preset-3 uppercase" data-astro-cid-zpgh5vpc>
+                  <h3
+                    class="technology-details__subtitle text-preset-3 uppercase"
+                    data-astro-cid-zpgh5vpc
+                  >
                     Launch vehicle
                   </h3>
-                  <p class="technology-details__description color-blue-300 text-preset-9" data-astro-cid-zpgh5vpc>
-                    A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth&#39;s surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it&#39;s quite an awe-inspiring sight on the launch pad!
-                  </p>
-                </article><article id="slide1" class="slide slide-1 " role="group" aria-roledescription="slide" aria-label="Spaceport" aria-hidden="true" data-astro-cid-zpgh5vpc>
-                  <h2 class="technology-details__title text-preset-4 uppercase color-aluminium" data-astro-cid-zpgh5vpc>
-                    THE TERMINOLOGY…
-                  </h2>
-
-                  <h3 class="technology-details__subtitle text-preset-3 uppercase" data-astro-cid-zpgh5vpc>
-                    Spaceport
-                  </h3>
-                  <p class="technology-details__description color-blue-300 text-preset-9" data-astro-cid-zpgh5vpc>
-                    A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.
-                  </p>
-                </article><article id="slide2" class="slide slide-2 " role="group" aria-roledescription="slide" aria-label="Space capsule" aria-hidden="true" data-astro-cid-zpgh5vpc>
-                  <h2 class="technology-details__title text-preset-4 uppercase color-aluminium" data-astro-cid-zpgh5vpc>
-                    THE TERMINOLOGY…
-                  </h2>
-
-                  <h3 class="technology-details__subtitle text-preset-3 uppercase" data-astro-cid-zpgh5vpc>
-                    Space capsule
-                  </h3>
-                  <p class="technology-details__description color-blue-300 text-preset-9" data-astro-cid-zpgh5vpc>
-                    A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth&#39;s atmosphere without wings. Our capsule is where you&#39;ll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.
+                  <p
+                    class="technology-details__description color-blue-300 text-preset-9"
+                    data-astro-cid-zpgh5vpc
+                  >
+                    A launch vehicle or carrier rocket is a rocket-propelled
+                    vehicle used to carry a payload from Earth&#39;s surface to
+                    space, usually to Earth orbit or beyond. Our WEB-X carrier
+                    rocket is the most powerful in operation. Standing 150
+                    metres tall, it&#39;s quite an awe-inspiring sight on the
+                    launch pad!
                   </p>
                 </article>
-          </div>
+                <article
+                  id="slide1"
+                  class="slide slide-1"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Spaceport"
+                  aria-hidden="true"
+                  data-astro-cid-zpgh5vpc
+                >
+                  <h2
+                    class="technology-details__title text-preset-4 uppercase color-aluminium"
+                    data-astro-cid-zpgh5vpc
+                  >
+                    THE TERMINOLOGY…
+                  </h2>
+
+                  <h3
+                    class="technology-details__subtitle text-preset-3 uppercase"
+                    data-astro-cid-zpgh5vpc
+                  >
+                    Spaceport
+                  </h3>
+                  <p
+                    class="technology-details__description color-blue-300 text-preset-9"
+                    data-astro-cid-zpgh5vpc
+                  >
+                    A spaceport or cosmodrome is a site for launching (or
+                    receiving) spacecraft, by analogy to the seaport for ships
+                    or airport for aircraft. Based in the famous Cape Canaveral,
+                    our spaceport is ideally situated to take advantage of the
+                    Earth’s rotation for launch.
+                  </p>
+                </article>
+                <article
+                  id="slide2"
+                  class="slide slide-2"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Space capsule"
+                  aria-hidden="true"
+                  data-astro-cid-zpgh5vpc
+                >
+                  <h2
+                    class="technology-details__title text-preset-4 uppercase color-aluminium"
+                    data-astro-cid-zpgh5vpc
+                  >
+                    THE TERMINOLOGY…
+                  </h2>
+
+                  <h3
+                    class="technology-details__subtitle text-preset-3 uppercase"
+                    data-astro-cid-zpgh5vpc
+                  >
+                    Space capsule
+                  </h3>
+                  <p
+                    class="technology-details__description color-blue-300 text-preset-9"
+                    data-astro-cid-zpgh5vpc
+                  >
+                    A space capsule is an often-crewed spacecraft that uses a
+                    blunt-body reentry capsule to reenter the Earth&#39;s
+                    atmosphere without wings. Our capsule is where you&#39;ll
+                    spend your time during the flight. It includes a space gym,
+                    cinema, and plenty of other activities to keep you
+                    entertained.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
-    </div>
-    <script type="module">const technology = [{"name":"Launch vehicle","images":{"portrait":"./assets/technology/image-launch-vehicle-portrait.jpg","landscape":"./assets/technology/image-launch-vehicle-landscape.jpg"},"description":"A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"},{"name":"Spaceport","images":{"portrait":"./assets/technology/image-spaceport-portrait.jpg","landscape":"./assets/technology/image-spaceport-landscape.jpg"},"description":"A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch."},{"name":"Space capsule","images":{"portrait":"./assets/technology/image-space-capsule-portrait.jpg","landscape":"./assets/technology/image-space-capsule-landscape.jpg"},"description":"A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."}];
+        <script type="module">
+          const technology = [
+            {
+              name: "Launch vehicle",
+              images: {
+                portrait:
+                  "./assets/technology/image-launch-vehicle-portrait.jpg",
+                landscape:
+                  "./assets/technology/image-launch-vehicle-landscape.jpg",
+              },
+              description:
+                "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
+            },
+            {
+              name: "Spaceport",
+              images: {
+                portrait: "./assets/technology/image-spaceport-portrait.jpg",
+                landscape: "./assets/technology/image-spaceport-landscape.jpg",
+              },
+              description:
+                "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.",
+            },
+            {
+              name: "Space capsule",
+              images: {
+                portrait:
+                  "./assets/technology/image-space-capsule-portrait.jpg",
+                landscape:
+                  "./assets/technology/image-space-capsule-landscape.jpg",
+              },
+              description:
+                "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.",
+            },
+          ];
 
-      import { initializeSlides } from "./scripts/slides.js";
+          import { initializeSlides } from "./scripts/slides.js";
 
-      (() => {
-        initializeSlides({ data: technology, isTechnology: true });
-      })();
-    </script>
-  
-</div>
-
+          (() => {
+            initializeSlides({ data: technology, isTechnology: true });
+          })();
+        </script>
+      </div>
     </main>
     <footer class="mt-auto" data-astro-cid-sz7xmlte>
-  <div class="footer__attribution pt-10 pb-5" data-astro-cid-sz7xmlte>
-    Challenge by
-    <a href="https://www.frontendmentor.io/profile/barriedirk/solutions" target="_blank" rel="noopener" aria-label="View solutions by Barrie Freyre on Frontend Mentor" data-astro-cid-sz7xmlte>
-      Frontend Mentor</a>. Coded by
-    <a href="https://www.linkedin.com/in/barriefreyre/" target="_blank" rel="noopener" aria-label="Visit Barrie Freyre's LinkedIn profile" data-astro-cid-sz7xmlte>
-      Barrie Freyre</a>.
-  </div>
-</footer>
-  </body></html>
+      <div class="footer__attribution pt-10 pb-5" data-astro-cid-sz7xmlte>
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io/profile/barriedirk/solutions"
+          target="_blank"
+          rel="noopener"
+          aria-label="View solutions by Barrie Freyre on Frontend Mentor"
+          data-astro-cid-sz7xmlte
+        >
+          Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://www.linkedin.com/in/barriefreyre/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Visit Barrie Freyre's LinkedIn profile"
+          data-astro-cid-sz7xmlte
+        >
+          Barrie Freyre</a
+        >.
+      </div>
+    </footer>
+  </body>
+</html>
