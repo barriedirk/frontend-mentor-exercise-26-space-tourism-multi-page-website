@@ -27,7 +27,7 @@
   font-weight: var(--fw-bold);
 }
 
-.header__nav-list {
+@.header__nav-list {
   items-align: center;
 }
 
@@ -46,7 +46,10 @@
     padding-inline: 39px;
     max-width: 740px;
 
-    @apply flex flex-row justify-end items-center;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
   }
 
   .header__nav-list {

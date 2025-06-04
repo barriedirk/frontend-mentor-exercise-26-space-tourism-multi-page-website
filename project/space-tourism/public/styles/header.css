@@ -1,0 +1,162 @@
+.header {
+  color: var(--clr-white);
+  z-index: 1;
+}
+
+.header__separator {
+  flex-grow: 0;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+  color: #979797;
+  background-color: #979797;
+  z-index: 1;
+}
+
+.header__nav-item {
+  line-height: normal;
+}
+
+.header__nav-link {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.header__nav-link strong {
+  font-weight: var(--fw-bold);
+}
+
+@.header__nav-list {
+  items-align: center;
+}
+
+.header__toggle {
+  display: none;
+  background-repeat: no-repeat;
+  background-size: center center;
+}
+
+@media screen and (min-width: 40.6875em) {
+  .header__nav {
+    height: 100%;
+    width: 100%;
+    background-color: var(--clr-infinity);
+    transform: translate(39px);
+    padding-inline: 39px;
+    max-width: 740px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .header__nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 40.625em) {
+  .header__nav-link::after {
+    bottom: -10px;
+  }
+
+  .header__nav-list {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header__toggle {
+    display: inline-block;
+  }
+
+  .header__toggle[aria-expanded="false"] {
+    background-image: url("../assets/shared/icon-hamburger.svg");
+    width: 24px;
+    height: 21px;
+  }
+
+  .header__toggle[aria-expanded="true"] {
+    background-image: url("../assets/shared/icon-close.svg");
+    width: 24px;
+    height: 21px;
+  }
+
+  body::before {
+    position: fixed;
+    content: "";
+
+    top: 0;
+    right: 0;
+    left: 25%;
+    bottom: 0;
+
+    transform: translateY(-100%);
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  body.is-expanded::before {
+    transform: translateY(0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* source: https://animista.net/play/entrances/slide-in-bck */
+    -webkit-animation: slide-in-bck-center 1s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-bck-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  body.is-expanded .header__nav-list {
+    display: flex;
+    position: fixed;
+    top: 130px;
+    left: 35%;
+    gap: 35px;
+  }
+}
+
+@media screen and (min-width: 53.25em) {
+  .header__nav {
+    flex: 0 0 740px;
+    padding-inline: 60px;
+  }
+
+  .header__separator {
+    flex-grow: 1;
+    opacity: 0.25;
+    width: 100%;
+    transform: translateX(60px);
+    z-index: 1;
+  }
+}
+
+@-webkit-keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+    transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+    transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
