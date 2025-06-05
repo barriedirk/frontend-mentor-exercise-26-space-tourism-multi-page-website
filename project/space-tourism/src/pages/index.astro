@@ -122,7 +122,8 @@ import Container from "../components/Container.astro";
     }
 
     .hero__explore:is(:hover, :active, :focus-visible) {
-      box-shadow: 0 0 0 84px var(--clr-infinity);
+      box-shadow: 0 0 0 84px var(--clr-infinity-70);
+      backdrop-filter: blur(10px);
     }
 
     .hero__explore--wrapper {

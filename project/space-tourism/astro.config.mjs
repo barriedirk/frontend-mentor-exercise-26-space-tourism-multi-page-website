@@ -5,8 +5,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://barriedirk.github.io",
-  base: "/frontend-mentor-exercise-26-space-tourism-multi-page-website",
+  // site: "https://barriedirk.github.io",
+  // base: "/frontend-mentor-exercise-26-space-tourism-multi-page-website",
   compressHTML: false,
   build: {
     format: "file",

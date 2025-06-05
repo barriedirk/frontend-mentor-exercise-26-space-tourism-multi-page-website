@@ -41,7 +41,7 @@
   .header__nav {
     height: 100%;
     width: 100%;
-    background-color: var(--clr-infinity);
+    background-color: var(--clr-infinity-70);
     transform: translate(39px);
     padding-inline: 39px;
     max-width: 740px;
@@ -50,6 +50,8 @@
     flex-direction: row;
     justify-content: end;
     align-items: center;
+
+    backdrop-filter: blur(10px);
   }
 
   .header__nav-list {

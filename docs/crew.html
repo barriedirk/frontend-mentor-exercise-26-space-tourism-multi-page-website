@@ -1,14 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content="Astro v5.5.6" />
-
-    <base
-      href="https://barriedirk.github.io/frontend-mentor-exercise-26-space-tourism-multi-page-website/"
-    />
 
     <link
       rel="icon"
@@ -69,15 +65,26 @@
             --tw-skew-y: initial;
             --tw-border-style: solid;
             --tw-outline-style: solid;
+            --tw-backdrop-blur: initial;
+            --tw-backdrop-brightness: initial;
+            --tw-backdrop-contrast: initial;
+            --tw-backdrop-grayscale: initial;
+            --tw-backdrop-hue-rotate: initial;
+            --tw-backdrop-invert: initial;
+            --tw-backdrop-opacity: initial;
+            --tw-backdrop-saturate: initial;
+            --tw-backdrop-sepia: initial;
           }
         }
       }
       @layer theme {
         :root,
         :host {
-          --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+          --font-sans:
+            ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
             "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-          --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          --font-mono:
+            ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
             "Liberation Mono", "Courier New", monospace;
           --spacing: 0.25rem;
           --container-7xl: 80rem;
@@ -422,8 +429,8 @@
         .h-\[40px\] {
           height: 40px;
         }
-        .h-\[80px\] {
-          height: 80px;
+        .h-\[96px\] {
+          height: 96px;
         }
         .h-fit {
           height: fit-content;
@@ -444,8 +451,8 @@
           flex-basis: 40px;
         }
         .transform {
-          transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z)
-            var(--tw-skew-x) var(--tw-skew-y);
+          transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,)
+            var(--tw-skew-x,) var(--tw-skew-y,);
         }
         .flex-col {
           flex-direction: column;
@@ -513,6 +520,18 @@
           outline-style: var(--tw-outline-style);
           outline-width: 1px;
         }
+        .backdrop-filter {
+          -webkit-backdrop-filter: var(--tw-backdrop-blur,)
+            var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,)
+            var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,)
+            var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,)
+            var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+          backdrop-filter: var(--tw-backdrop-blur,)
+            var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,)
+            var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,)
+            var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,)
+            var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+        }
         @media (min-width: 48rem) {
           .md\:max-w-7xl {
             max-width: var(--container-7xl);
@@ -541,6 +560,7 @@
         --clr-white-60: #fff9;
         --clr-aluminium: #85868a;
         --clr-infinity: #262831;
+        --clr-infinity-70: #26283199;
         --clr-stroke: #4d4e57;
         --ff-bellefair: "Bellefair", serif;
         --ff-barlow: "Barlow Condensed", sans-serif;
@@ -729,7 +749,7 @@
         width: 100%;
         height: 2px;
         position: absolute;
-        bottom: -28px;
+        bottom: -37px;
         left: 0;
       }
       .hover-underline:is(:hover, :active, :focus-visible):after {
@@ -768,7 +788,9 @@
         align-items: center;
         width: 100%;
         height: 100%;
-        transition: opacity 0.6s, filter 0.6s;
+        transition:
+          opacity 0.6s,
+          filter 0.6s;
         display: flex;
         position: absolute;
         top: 0;
@@ -809,6 +831,42 @@
         syntax: "*";
         inherits: false;
         initial-value: solid;
+      }
+      @property --tw-backdrop-blur {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-backdrop-brightness {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-backdrop-contrast {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-backdrop-grayscale {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-backdrop-hue-rotate {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-backdrop-invert {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-backdrop-opacity {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-backdrop-saturate {
+        syntax: "*";
+        inherits: false;
+      }
+      @property --tw-backdrop-sepia {
+        syntax: "*";
+        inherits: false;
       }
       footer[data-astro-cid-sz7xmlte] {
         color: var(--clr-white-60);
@@ -907,7 +965,7 @@
       role="banner"
     >
       <div
-        class="h-[80px] flex flex-row items-center justify-between px-[24px] mx-auto max-w-full md:max-w-7xl"
+        class="h-[96px] flex flex-row items-center justify-between px-[24px] mx-auto max-w-full md:max-w-7xl"
       >
         <a
           class="header__logo w-[40px] h-[40px] inline-block flex-none basis-[40px]"
